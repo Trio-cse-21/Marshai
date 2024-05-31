@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.A Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        #blur {
+            flex: 1;
+            position: relative;
+            padding-top: 80px; /* Ensure content is not hidden under fixed header */
+            padding-bottom: 60px; /* Ensure content is not hidden under fixed footer */
+        }
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+
+        .navbar a span {
+            margin-right: 5px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+            background-color: rgb(162, 162, 248);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .footer h3,
+        .footer h4 {
+            margin: 0;
+            color: black; /* Change font color to black */
+        }
+
+        .last1 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .last2 {
+            flex: 1;
+            width: 50px;
+            display: flex;
+            justify-content: center; /* Center-align social media icons */
+            align-items: center; /* Align vertically center */
+            gap: 10px;
+        }
+
+        .last2 a {
+            color: black; /* Change icon color to black */
+            font-size: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Aligning the image to the center */
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+        /* Define colors for "Present" and "Absent" */
+        .present {
+            background-color: #7FFF7F; /* Light green */
+            color: #333;
+        }
+        .absent {
+            background-color: #FF7F7F; /* Light red */
+            color: #333;
+        }
+        /* Square image */
+        img {
+            width: 150px;
+            height: 150px; /* Set height equal to width */
+            border-radius: 50%;
+            object-fit: cover; /* Maintain aspect ratio and cover container */
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="blur">
+        <header>
+            <div class="logo" title="University Management System">
+                <img src="./images/logo.png" alt="">
+                <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+            </div>
+            <div class="navbar">
+                <a href="home.html" class="active">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="timetable.html" onclick="timeTableAll()">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Time Table</h3>
+                </a>
+                <a href="exam.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Examination</h3>
+                </a>
+                  <a href="H A dashboard.html" onclick="toggle()"> <i class="ri-dashboard-horizontal-line"></i>
+                    <h3>H A dashboard</h3>
+                  </a>
+                <a href="index.html" onclick="toggle()">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <div id="profile-btn">
+                <span class="material-icons-sharp">person</span>
+            </div>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+        </header>
+
+        <!-- Main Content Goes Here -->
+        <main>
+            <body>
+                <div class="container">
+                    <img src="images/Naruto.jpg" alt="Profile Image">
+            
+                    <h1>Attendance</h1>
+                    <table id="attendanceTable">
+                        <thead>
+                            <tr>
+                                <th>Subject</th> 
+                                <th>Date</th>
+                                <th>Time In</th>
+                                <th>Time Out</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id="attendanceBody">
+                            <!-- Attendance data will be populated here -->
+                        </tbody>
+                    </table>
+                </div>
+            
+                <script>
+                    // Function to fetch attendance data from server
+                    function fetchAttendance() {
+                        // Dummy data for demonstration purposes
+                        var dummyData = [
+                            { subject: "Mathematics", date: "2024-05-12", time_in: "09:00 AM", time_out: "05:00 PM", status: "Present" },
+                            { subject: "Science", date: "2024-05-11", time_in: "09:30 AM", time_out: "05:15 PM", status: "Present" },
+                            { subject: "English", date: "2024-05-10", time_in: "09:15 AM", time_out: "05:30 PM", status: "Absent" }
+                        ];
+            
+                        // Clear previous data
+                        var tableBody = document.getElementById("attendanceBody");
+                        tableBody.innerHTML = "";
+            
+                        // Populate table with fetched data
+                        dummyData.forEach(function (attendance) {
+                            var row = "<tr>" +
+                                "<td>" + attendance.subject + "</td>" +
+                                "<td>" + attendance.date + "</td>" +
+                                "<td>" + attendance.time_in + "</td>" +
+                                "<td>" + attendance.time_out + "</td>" +
+                                "<td class='" + attendance.status.toLowerCase() + "'>" + attendance.status + "</td>" +
+                                "</tr>";
+                            tableBody.innerHTML += row;
+                        });
+                    }
+            
+                    // Call the function to fetch attendance data when the page loads
+                    fetchAttendance();
+                </script>
+            </body>
+            
+        </main>
+    </div>
+
+    <div class="footer">
+        <div class="last1">
+            <h3>MARSHAI - UMS</h3>
+            <h4>&copy; All Rights Reserved 2024</h4>
+        </div>
+        <div class="last2">
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <!-- Add more social media icons as needed -->
+        </div>
+    </div>
+
+    <script src="timeTable.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript">
+        function toggle() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            // Assuming 'popup' element exists
+            var popup = document.getElementById('popup');
+            if (popup) {
+                popup.classList.toggle('active');
+            } else {
+                console.warn("Element with ID 'popup' not found.");
+            }
+        }
+    </script>
+</body>
+
+</html>

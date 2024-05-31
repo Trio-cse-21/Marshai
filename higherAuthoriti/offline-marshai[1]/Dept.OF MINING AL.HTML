@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.A Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        #blur {
+            flex: 1;
+            position: relative;
+            padding-top: 80px;
+            padding-bottom: 60px;
+        }
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+
+        .navbar a span {
+            margin-right: 5px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+            background-color: rgb(162, 162, 248);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .footer h3,
+        .footer h4 {
+            margin: 0;
+            color: black;
+        }
+
+        .last1 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .last2 {
+            flex: 1;
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .last2 a {
+            color: black;
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+        }
+
+        table {
+            width: 900px;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 2%;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            cursor: pointer;
+        }
+
+        th.sort-asc::after {
+            content: "\25B2";
+        }
+
+        th.sort-desc::after {
+            content: "\25BC";
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .profile-pic {
+            width: 50px;
+            height: 50px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .description {
+            text-align: justify;
+        }
+
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            color: #fff;
+        }
+
+        .btn-accept {
+            background-color: #28a745;
+        }
+
+        .btn-reject {
+            background-color: #dc3545;
+        }
+
+        .btn-accepted,
+        .btn-rejected {
+            color: #fff;
+            pointer-events: none;
+        }
+
+        .btn-accepted {
+            background-color: #155724;
+        }
+
+        .btn-rejected {
+            background-color: #721c24;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 10px;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th,
+            td {
+                padding: 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="blur">
+        <header>
+            <div class="logo" title="University Management System">
+                <img src="./images/logo.png" alt="">
+                <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+            </div>
+            <div class="navbar">
+                <a href="home.html" >
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="timetable.html" onclick="timeTableAll()">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Time Table</h3>
+                </a>
+                <a href="exam.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Examination</h3>
+                </a>
+                <a href="H A dashboard.html" onclick="toggle()"class="active2">
+                    <i class="ri-dashboard-horizontal-line"></i>
+                    <h3>H A dashboard</h3>
+                </a>
+                <a href="index.html" onclick="toggle()">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <div id="profile-btn">
+                <span class="material-icons-sharp">person</span>
+            </div>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+        </header>
+
+        <!-- Main Content Goes Here -->
+        <main>
+            <header>
+                <h1>Leave Application Display</h1>
+            </header>
+            <div class="container">
+                <table id="leaveTable">
+                    <thead>
+                        <tr>
+                            <th onclick="sortTable(0)">Profile Picture</th>
+                            <th onclick="sortTable(1)">Name</th>
+                            <th onclick="sortTable(2)">Leave Type</th>
+                            <th>Description</th>
+                            <th onclick="sortTable(4)">Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><img class="profile-pic" src="images/Oroshimaru.jpg" alt="Profile Picture"></td>
+                            <td>John Doe</td>
+                            <td>Sick Leave</td>
+                            <td class="description">John has requested sick leave due to a severe flu.</td>
+                            <td>2024-05-10</td>
+                            <td>
+                                <button class="btn btn-accept" onclick="acceptLeave(this)">Accept</button>
+                                <button class="btn btn-reject" onclick="rejectLeave(this)">Reject</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img class="profile-pic" src="img/Sensei 🙏🏼.jpg" alt="Profile Picture"></td>
+                            <td>Jane Smith</td>
+                            <td>Vacation Leave</td>
+                            <td class="description">Jane is requesting vacation leave to visit her family.</td>
+                            <td>2024-05-15</td>
+                            <td>
+                                <button class="btn btn-accept" onclick="acceptLeave(this)">Accept</button>
+                                <button class="btn btn-reject" onclick="rejectLeave(this)">Reject</button>
+                            </td>
+                        </tr>
+                        <!-- Add more rows for additional leave applications -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <div class="footer">
+        <div class="last1">
+            <h3>MARSHAI - UMS</h3>
+            <h4>&copy; All Rights Reserved 2024</h4>
+        </div>
+        <div class="last2">
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        </div>
+    </div>
+
+    <script src="timeTable.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript">
+        function toggle() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById('popup');
+            if (popup) {
+                popup.classList.toggle('active');
+            } else {
+                console.warn("Element with ID 'popup' not found.");
+            }
+        }
+
+        function acceptLeave(button) {
+            var row = button.parentNode.parentNode;
+            button.classList.add('btn-accepted');
+            button.textContent = "Accepted";
+            button.nextElementSibling.classList.add('btn-disabled');
+            button.nextElementSibling.disabled = true;
+            alert("Leave application accepted for " + row.cells[1].textContent);
+        }
+
+        function rejectLeave(button) {
+            var row = button.parentNode.parentNode;
+            button.classList.add('btn-rejected');
+            button.textContent = "Rejected";
+            button.previousElementSibling.classList.add('btn-disabled');
+            button.previousElementSibling.disabled = true;
+            alert("Leave application rejected for " + row.cells[1].textContent);
+        }
+
+        function sortTable(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById("leaveTable");
+            switching = true;
+            dir = "asc";
+            while (switching) {
+                switching = false;
+                rows = table.rows;
+                for (i = 1; i < (rows.length - 1); i++) {
+                    shouldSwitch = false;
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    if (dir == "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    switchcount++;
+                } else {
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+            updateSortIcons(table, n, dir);
+        }
+
+        function updateSortIcons(table, columnIndex, direction) {
+            var ths = table.getElementsByTagName("TH");
+            for (var i = 0; i < ths.length; i++) {
+                ths[i].classList.remove("sort-asc", "sort-desc");
+            }
+            if (direction === "asc") {
+                ths[columnIndex].classList.add("sort-asc");
+            } else {
+                ths[columnIndex].classList.add("sort-desc");
+            }
+        }
+    </script>
+</body>
+
+</html>

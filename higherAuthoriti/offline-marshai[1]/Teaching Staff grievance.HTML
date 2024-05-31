@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H.A Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <styl rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        #blur {
+            flex: 1;
+            position: relative;
+            padding-top: 80px; /* Ensure content is not hidden under fixed header */
+            padding-bottom: 60px; /* Ensure content is not hidden under fixed footer */
+        }
+
+        header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .logo h2 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            display: flex;
+            align-items: center;
+            margin-right: 20px;
+            text-decoration: none;
+            color: #000;
+        }
+
+        .navbar a.active {
+            font-weight: bold;
+        }
+
+        .navbar a span {
+            margin-right: 5px;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+            background-color: rgb(162, 162, 248);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .footer h3,
+        .footer h4 {
+            margin: 0;
+            color: black; /* Change font color to black */
+        }
+
+        .last1 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .last2 {
+            flex: 1;
+            width: 50px;
+            display: flex;
+            justify-content: center; /* Center-align social media icons */
+            align-items: center; /* Align vertically center */
+            gap: 10px;
+        }
+
+        .last2 a {
+            color: black; /* Change icon color to black */
+            font-size: 20px;
+        }
+
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .profile-pic {
+            width: 50px; /* Adjust the width as needed */
+            height: 50px; /* Adjust the height as needed */
+            border-radius: 5px; /* Changed border-radius to 5px for square shape */
+            object-fit: cover; /* This line ensures the image maintains its aspect ratio */
+        }
+        .description {
+            text-align: justify;
+        }
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            color: #fff;
+        }
+        .btn-view {
+            background-color: #3498db;
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div id="blur">
+        <header>
+            <div class="logo" title="University Management System">
+                <img src="./images/logo.png" alt="">
+                <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+            </div>
+            <div class="navbar">
+                <a href="home.html" >
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="timetable.html" onclick="timeTableAll()">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Time Table</h3>
+                </a>
+                <a href="exam.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Examination</h3>
+                </a>
+                <a href="H A dashboard.html" onclick="toggle()"class="active2"> <i class="ri-dashboard-horizontal-line"></i>
+                    <h3>H A dashboard</h3>
+                  </a>
+                <a href="index.html" onclick="toggle()">
+                    <span class="material-icons-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <div id="profile-btn">
+                <span class="material-icons-sharp">person</span>
+            </div>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+        </header>
+
+        <!-- Main Content Goes Here -->
+ <main>
+    <body>
+        <header>
+            <h1>  Teaching Staff Grievance Display</h1>
+        </header>
+     <div class="container">
+         <table>
+            <thead>
+                <tr>
+                    <th>Profile Picture</th>
+                    <th>Name</th>
+                    <th>Grievance Type</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img class="profile-pic" src="images/Naruto.jpg" alt="Profile Picture"></td>
+                    <td>John Doe</td>
+                    <td>Harassment by supervisor</td>
+                    <td class="description">John has reported several instances where his supervisor has made inappropriate comments and exhibited threatening behavior towards him.</td>
+                    <td>2024-05-10</td>
+                    <td>
+                        <button class="btn btn-view" onclick="viewDetails(this)">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img class="profile-pic" src="img/Sensei 🙏🏼.jpg" alt="Profile Picture"></td>
+                    <td>Jane Smith</td>
+                    <td>Discrimination in workplace</td>
+                    <td class="description">Jane has observed and experienced discriminatory practices in the workplace based on her gender and has documented specific instances.</td>
+                    <td>2024-05-15</td>
+                    <td>
+                        <button class="btn btn-view" onclick="viewDetails(this)">View Details</button>
+                    </td>
+                </tr>
+                <!-- Add more rows for additional grievances -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function viewDetails(button) {
+            // Find the parent row of the button
+            var row = button.parentNode.parentNode;
+            // Get the grievance details
+            var grievance = row.cells[2].textContent;
+            var description = row.cells[3].textContent;
+            // You can do whatever you want with the grievance details, for example, display in an alert
+            alert("Grievance Details:\n\n" + grievance + "\n\nDescription:\n\n" + description);
+        }
+    </script>
+ </body>
+</main>
+    </div>
+
+    <div class="footer">
+        <div class="last1">
+            <h3>MARSHAI - UMS</h3>
+            <h4>&copy; All Rights Reserved 2024</h4>
+        </div>
+        <div class="last2">
+            <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+            <!-- Add more social media icons as needed -->
+        </div>
+    </div>
+
+    <script src="timeTable.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript">
+        function toggle() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            // Assuming 'popup' element exists
+            var popup = document.getElementById('popup');
+            if (popup) {
+                popup.classList.toggle('active');
+            } else {
+                console.warn("Element with ID 'popup' not found.");
+            }
+        }
+    </script>
+</body>
+
+</html>
