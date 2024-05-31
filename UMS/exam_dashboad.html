@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./images/logo.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../style/exam_dashboad.css">
+  <link rel="stylesheet" href="../style/exam-dashContainer.css">
+
+</head>
+
+<body style="background-image: url(../image/cloud.jpg); background-size: cover;">
+  <div id="blur">
+    <header>
+      <div class="logo" title="University Management System">
+        <img src="../image/logo1.jpg" alt="">
+        <a href="../index.html">
+          <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+        </a>
+      </div>
+      <div class="navbar">
+        <a href="exam_dashboad.html" class="active">
+          <span class="material-icons-sharp">home</span>
+          <h3>Examination</h3>
+        </a>
+        <a href="timetable.html" onclick="timeTableAll()">
+          <span class="material-icons-sharp">today</span>
+          <h3>Time Table</h3>
+        </a>
+        <a href="exam.html">
+          <span class="material-icons-sharp">grid_view</span>
+          <h3></h3>
+        </a>
+        <a href="password.html">
+          <span class="ri-honour-line " style="font-size: 20px;font-weight: 500;"></span>
+
+          <h3>Semester</h3>
+        </a>
+        <a href="../index.html">
+          <span class="material-icons-sharp" onclick="">logout</span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+      <div id="profile-btn">
+        <span class="material-icons-sharp">person</span>
+      </div>
+      <div class="theme-toggler">
+        <span class="material-icons-sharp active">light_mode</span>
+        <span class="material-icons-sharp">dark_mode</span>
+      </div>
+
+    </header>
+
+    <div class="container">
+      <aside>
+
+        <div class="profile">
+
+        </div>
+      </aside>
+      <!--Main Navigation-->
+
+
+      <div class="margin1" style="margin-top: 50px;margin-left: 10%;">
+        <main style="justify-content: center;margin: auto;">
+          <h1>Dashboard <i class="ri-dashboard-horizontal-line"></i></h1>
+          <div class="subjects">
+            <div class="eg">
+              <span class="material-icons-sharp">architecture</span>
+              <h2>New Student Details</h2>
+              <ul class="top-level-menu">
+                <li><a href="#">Select Department</a>
+
+                  <ul class="second-level-menu">
+                    <li>
+                      <a href="#">Dept.OF CSE & IT</a>
+                      <ul class="third-level-menu">
+                        <li>
+                          <a href="#">BTECH CSE</a>
+                          <ul class="Forth-level-menu">
+                            <li><a href="new_student_inventry.html">Regular Student</a></li>
+                            <li><a href="new_student_inventry.html">lateral entry Student</a></li>
+                            <!-- Add more submenu items as needed -->
+                          </ul>
+                        </li>
+
+                        <li><a href="new_student_inventry.html">DIPLOMA ENGG. CSE</a></li>
+                        <li><a href="new_student_inventry.html">MCA</a></li>
+                        <li><a href="new_student_inventry.html">BCA</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#">Dept.OF MINING</a>
+                      <ul class="third-level-menu">
+                        <li><a href="new_student_inventry.html">BTECH MINING</a></li>
+                        <li><a href="new_student_inventry.html">DIPLOMA ENGG. MINING</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF PHARMACY</a>
+                      <ul class="third-level-menu">
+                        <li><a href="new_student_inventry.html">B.PHARMA</a></li>
+                        <li><a href="new_student_inventry.html">D.PHARMA</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF LAW</a>
+                      <ul class="third-level-menu">
+                        <li><a href="new_student_inventry.html">BA-LLB</a></li>
+                        <li><a href="new_student_inventry.htm">LLB</a></li>
+                        <li><a href="new_student_inventry.html">LLM</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF AGRICULTURE</a>
+                      <ul class="third-level-menu">
+                        <li><a href="new_student_inventry.html">M.Sc</a></li>
+                        <li><a href="new_student_inventry.html">B.Sc</a></li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept. OF MANAGEMENT</a>
+                      <ul class="third-level-menu">
+                        <li><a href="new_student_inventry.html">M.COM</a></li>
+                        <li><a href="new_student_inventry.html">MBA</a></li>
+                        <li><a href="new_student_inventry.html">BBA</a></li>
+                        <li><a href="new_student_inventry.html">B.COM</a></li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                      <ul class="third-level-menu">
+                        <li><a href="new_student_inventry.html">BMLT</a></li>
+                        <li><a href="new_student_inventry.html">BPT</a></li>
+
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+            <div class="eg">
+              <span class="material-icons-sharp">architecture</span>
+              <h2>Online & Offline Exam</h2>
+              <ul class="top-level-menu">
+                <li><a href="#">Select Department</a>
+
+                  <ul class="second-level-menu">
+                    <li>
+                      <a href="#">Dept.OF CSE & IT</a>
+                      <ul class="third-level-menu">
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">BTECH
+                            CSE</a></li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">DIPLOMA
+                            ENGG. CSE</a></li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">MCA</a>
+                        </li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">BCA</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#">Dept.OF MINING</a>
+                      <ul class="third-level-menu">
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">BTECH
+                            MINING</a></li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">DIPLOMA
+                            ENGG. MINING</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF PHARMACY</a>
+                      <ul class="third-level-menu">
+                        <li><a hhref="https://edu.google.com/workspace-for-education/classroom/"
+                            target="_blank">B.PHARMA</a></li>
+                        <li><a hhref="https://edu.google.com/workspace-for-education/classroom/"
+                            target="_blank">D.PHARMA</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF LAW</a>
+                      <ul class="third-level-menu">
+                        <li><a hhref="https://edu.google.com/workspace-for-education/classroom/"
+                            target="_blank">BA-LLB</a></li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">LLB</a>
+                        </li>
+                        <li><a hhref="https://edu.google.com/workspace-for-education/classroom/" target="_blank">LLM</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF AGRICULTURE</a>
+                      <ul class="third-level-menu">
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">M.Sc</a>
+                        </li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">B.Sc</a>
+                        </li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept. OF MANAGEMENT</a>
+                      <ul class="third-level-menu">
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/"
+                            target="_blank">M.COM</a></li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">MBA</a>
+                        </li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">BBA</a>
+                        </li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/"
+                            target="_blank">B.COM</a></li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                      <ul class="third-level-menu">
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">BMLT</a>
+                        </li>
+                        <li><a href="https://edu.google.com/workspace-for-education/classroom/" target="_blank">BPT</a>
+                        </li>
+
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+
+
+
+
+            <div class="mth">
+              <span class="material-icons-sharp">functions</span>
+              <h2>Marks Entry Pending Report</h2>
+              <ul class="top-level-menu">
+                <li><a href="#">Select Department</a>
+
+                  <ul class="second-level-menu">
+                    <li>
+                      <a href="#">Dept.OF CSE & IT</a>
+                      <ul class="third-level-menu">
+                        <li><a href="#">BTECH CSE</a>
+                          <ul class="Forth-level-menu">
+                            <li><a href="Marks_panding_report.html">semester1</a></li>
+                            <li><a href="Marks_panding_report.html">semester2</a></li>
+                            <li><a href="Marks_panding_report.html">semester3</a></li>
+                            <li><a href="Marks_panding_report.html">semester4</a></li>
+                            <li><a href="Marks_panding_report.html">semester5</a></li>
+                            <li><a href="Marks_panding_report.html">semester6</a></li>
+                            <li><a href="Marks_panding_report.html">semester7</a></li>
+                            <li><a href="Marks_panding_report.html">semester8</a></li>
+                            <!-- Add more submenu items as needed -->
+                          </ul>
+                        </li>
+                        <li><a href="#">DIPLOMA ENGG. CSE</a>
+                          <ul class="Forth-level-menu">
+                            <li><a href="Marks_panding_report.html">semester1</a></li>
+                            <li><a href="Marks_panding_report.html">semester2</a></li>
+                            <li><a href="Marks_panding_report.html">semester3</a></li>
+                            <li><a href="Marks_panding_report.html">semester4</a></li>
+                            <li><a href="Marks_panding_report.html">semester5</a></li>
+                            <li><a href="Marks_panding_report.html">semester6</a></li>
+
+                            <!-- Add more submenu items as needed -->
+                          </ul>
+                        </li>
+                        <li><a href="#">MCA</a>
+                          <ul class="Forth-level-menu">
+                            <li><a href="Marks_panding_report.html">semester1</a></li>
+                            <li><a href="Marks_panding_report.html">semester2</a></li>
+                            <li><a href="Marks_panding_report.html">semester3</a></li>
+                            <li><a href="Marks_panding_report.html">semester4</a></li>
+
+                            <!-- Add more submenu items as needed -->
+                          </ul>
+                        </li>
+                        <li><a href="#">BCA</a>
+                          <ul class="Forth-level-menu">
+                            <li><a href="Marks_panding_report.html">semester1</a></li>
+                            <li><a href="Marks_panding_report.html">semester2</a></li>
+                            <li><a href="Marks_panding_report.html">semester3</a></li>
+                            <li><a href="Marks_panding_report.html">semester4</a></li>
+                            <li><a href="Marks_panding_report.html">semester5</a></li>
+                            <li><a href="Marks_panding_report.html">semester6</a></li>
+                            <li><a href="Marks_panding_report.html">semester7</a></li>
+                            <li><a href="Marks_panding_report.html">semester8</a></li>
+                            <!-- Add more submenu items as needed -->
+                          </ul>
+                        </li>
+                        <href="https: //classroom.google.com/" target="_blank">Google Classroom</href=>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">Dept.OF MINING</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">BTECH MINING</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+                        <li><a href="Marks_panding_report.html">semester7</a></li>
+                        <li><a href="Marks_panding_report.html">semester8</a></li>
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">DIPLOMA ENGG. MINING</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Dept.OF PHARMACY</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">B.PHARMA</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+                        <li><a href="Marks_panding_report.html">semester7</a></li>
+                        <li><a href="Marks_panding_report.html">semester8</a></li>
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">D.PHARMA</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Dept.OF LAW</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">BA-LLB</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+                        <li><a href="Marks_panding_report.html">semester7</a></li>
+                        <li><a href="Marks_panding_report.html">semester8</a></li>
+                        <li><a href="Marks_panding_report.html">semester9</a></li>
+                        <li><a href="Marks_panding_report.html">semester10</a></li>
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="../html_file/timetable.html">LLB</a></li>
+                    <li><a href="#">LLM</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Dept.OF AGRICULTURE</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">M.Sc</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">B.Sc</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Dept. OF MANAGEMENT</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">M.COM</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">MBA</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">BBA</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">B.COM</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Marks_panding_report.html">semester1</a></li>
+                        <li><a href="Marks_panding_report.html">semester2</a></li>
+                        <li><a href="Marks_panding_report.html">semester3</a></li>
+                        <li><a href="Marks_panding_report.html">semester4</a></li>
+                        <li><a href="Marks_panding_report.html">semester5</a></li>
+                        <li><a href="Marks_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">BMLT</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Mark_panding_report.html">semester1</a></li>
+                        <li><a href="Mark_panding_report.html">semester2</a></li>
+                        <li><a href="Mark_panding_report.html">semester3</a></li>
+                        <li><a href="Mark_panding_report.html">semester4</a></li>
+                        <li><a href="Mark_panding_report.html">semester5</a></li>
+                        <li><a href="Mark_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">BPT</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Mark_panding_report.html">semester1</a></li>
+                        <li><a href="Mark_panding_report.html">semester2</a></li>
+                        <li><a href="Mark_panding_report.html">semester3</a></li>
+                        <li><a href="Mark_panding_report.html">semester4</a></li>
+                        <li><a href="Mark_panding_report.html">semester5</a></li>
+                        <li><a href="Mark_panding_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+
+              </ul>
+              </li>
+
+              </ul>
+
+
+            </div>
+            <div class="net">
+              <span class="material-icons-sharp">router</span>
+              <h2>Results Consolidation Report</h2>
+              <ul class="top-level-menu">
+                <li><a href="#">Select Department</a>
+
+                  <ul class="second-level-menu">
+                    <li>
+                      <a href="#">Dept.OF CSE & IT</a>
+                      <ul class="third-level-menu">
+                        <li><a href="Result_consdration_report.html">BTECH CSE</a></li>
+                        <li><a href="Result_consdration_report.html">DIPLOMA ENGG. CSE</a></li>
+                        <li><a href="Result_consdration_report.html">MCA</a></li>
+                        <li><a href="Result_consdration_report.html">BCA</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#">Dept.OF MINING</a>
+                      <ul class="third-level-menu">
+                        <li><a href="Result_consdration_report.html">BTECH MINING</a></li>
+                        <li><a href="Result_consdration_report.html">DIPLOMA ENGG. MINING</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF PHARMACY</a>
+                      <ul class="third-level-menu">
+                        <li><a href="Result_consdration_report.html">B.PHARMA</a></li>
+                        <li><a href="Result_consdration_report.html">D.PHARMA</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF LAW</a>
+                      <ul class="third-level-menu">
+                        <li><a href="Result_consdration_report.html">BA-LLB</a></li>
+                        <li><a href="Result_consdration_report.html">LLB</a></li>
+                        <li><a href="Result_consdration_report.html">LLM</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF AGRICULTURE</a>
+                      <ul class="third-level-menu">
+                        <li><a href="Result_consdration_report.html">M.Sc</a></li>
+                        <li><a href="Result_consdration_report.html">B.Sc</a></li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept. OF MANAGEMENT</a>
+                      <ul class="third-level-menu">
+                        <li><a href="Result_consdration_report.html">M.COM</a></li>
+                        <li><a href="Result_consdration_report.html">MBA</a></li>
+                        <li><a href="Result_consdration_report.html">BBA</a></li>
+                        <li><a href="Result_consdration_report.html">B.COM</a></li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                      <ul class="third-level-menu">
+                        <li><a href="Result_consdration_report.html">BMLT</a></li>
+                        <li><a href="Result_consdration_report.html">BPT</a></li>
+
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+
+              </ul>
+
+            </div>
+            <div class="cs">
+              <span class="material-icons-sharp">computer</span>
+              <h2>Examination result Report</h2><br>
+
+              <ul class="top-level-menu">
+                <li><a href="#">Select Department</a>
+
+                  <ul class="second-level-menu">
+                    <li>
+                      <a href="#">Dept.OF CSE & IT</a>
+                      <ul class="third-level-menu">
+                        <li><a href="#">BTECH CSE</a>
+                          <ul class="Forth-level-menu">
+                            <li><a href="Student_result_list.html">semester1</a></li>
+                            <li><a href="Student_result_list.html">semester2</a></li>
+                            <li><a href="Student_result_list.html">semester3</a></li>
+                            <li><a href="Student_result_list.html">semester4</a></li>
+                            <li><a href="Student_result_list.html">semester5</a></li>
+                            <li><a href="Student_result_list.html">semester6</a></li>
+                            <li><a href="Student_result_list.html">semester7</a></li>
+                            <li><a href="Student_result_list.html">semester8</a></li>
+                            <!-- Add more submenu items as needed -->
+                          </ul>
+                        </li>
+                        <li><a href="#">DIPLOMA ENGG. CSE</a>
+                          <ul class="Forth-level-menu">
+                            <li><a href="Student_result_list.html">semester1</a></li>
+                            <li><a href="Student_result_list.html">semester2</a></li>
+                            <li><a href="Student_result_list.html">semester3</a></li>
+                            <li><a href="Student_result_list.html">semester4</a></li>
+                            <li><a href="Student_result_list.html">semester5</a></li>
+                            <li><a href="Student_result_list.html">semester6</a></li>
+
+                            <!-- Add more submenu items as needed -->
+                          </ul>
+                        </li>
+                        <li><a href="#">MCA</a>
+                          <ul class="Forth-level-menu">
+                            <li><a href="Student_result_list.html">semester1</a></li>
+                            <li><a href="Student_result_list.html">semester2</a></li>
+                            <li><a href="Student_result_list.html">semester3</a></li>
+                            <li><a href="Student_result_list.html">semester4</a></li>
+
+                            <!-- Add more submenu items as needed -->
+                          </ul>
+                        </li>
+                        <li><a href="#">BCA</a>
+                          <ul class="Forth-level-menu">
+                            <li><a href="Student_result_list.html">semester1</a></li>
+                            <li><a href="Student_result_list.html">semester2</a></li>
+                            <li><a href="Student_result_list.html">semester3</a></li>
+                            <li><a href="Student_result_list.html">semester4</a></li>
+                            <li><a href="Student_result_list.html">semester5</a></li>
+                            <li><a href="Student_result_list.html">semester6</a></li>
+                            <li><a href="Student_result_list.html">semester7</a></li>
+                            <li><a href="Student_result_list.html">semester8</a></li>
+                            <!-- Add more submenu items as needed -->
+                          </ul>
+                        </li>
+                        <href="https: //classroom.google.com/" target="_blank">Google Classroom</href=>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">Dept.OF MINING</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">BTECH MINING</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+                        <li><a href="Student_result_list.html">semester7</a></li>
+                        <li><a href="Student_result_list.html">semester8</a></li>
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">DIPLOMA ENGG. MINING</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Dept.OF PHARMACY</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">B.PHARMA</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+                        <li><a href="Student_result_list.html">semester7</a></li>
+                        <li><a href="Student_result_list.html">semester8</a></li>
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">D.PHARMA</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Dept.OF LAW</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">BA-LLB</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+                        <li><a href="Student_result_list.html">semester7</a></li>
+                        <li><a href="Student_result_list.html">semester8</a></li>
+                        <li><a href="Student_result_list.html">semester9</a></li>
+                        <li><a href="Student_result_list.html">semester10</a></li>
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="../html_file/timetable.html">LLB</a></li>
+                    <li><a href="#">LLM</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Dept.OF AGRICULTURE</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">M.Sc</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">B.Sc</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">Dept. OF MANAGEMENT</a>
+                  <ul class="third-level-menu">
+                    <li><a href="#">M.COM</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">MBA</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">BBA</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Student_result_list.html">semester1</a></li>
+                        <li><a href="Student_result_list.html">semester2</a></li>
+                        <li><a href="Student_result_list.html">semester3</a></li>
+                        <li><a href="Student_result_list.html">semester4</a></li>
+                        <li><a href="Student_result_list.html">semester5</a></li>
+                        <li><a href="Student_result_list.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+                    <li><a href="#">B.COM</a>
+                      <ul class="Forth-level-menu">
+                        <li><a href="Result_consdration_report.html">semester1</a></li>
+                        <li><a href="Result_consdration_report.html">semester2</a></li>
+                        <li><a href="Result_consdration_report.html">semester3</a></li>
+                        <li><a href="Result_consdration_report.html">semester4</a></li>
+                        <li><a href="Result_consdration_report.html">semester5</a></li>
+                        <li><a href="Result_consdration_report.html">semester6</a></li>
+
+                        <!-- Add more submenu items as needed -->
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+
+              </ul>
+              <small class="text-muted">Last Update 24 Hours</small>
+            </div>
+            <div class="cg">
+              <span class="material-icons-sharp">dns</span>
+              <h2>Consolidate Report</h2>
+
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>96%</p>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+            <div class="cg">
+              <span class="material-icons-sharp">dns</span>
+              <h2>Communication</h2>
+
+
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+            <div class="net">
+              <span class="material-icons-sharp">router</span>
+              <h2>Exam Started</h2>
+
+              <ul class="top-level-menu">
+                <li><a href="#">Select Department</a>
+
+                  <ul class="second-level-menu">
+                    <li>
+                      <a href="#">Dept.OF CSE & IT</a>
+                      <ul class="third-level-menu">
+                        <li><a href="#">BTECH CSE</a></li>
+                        <li><a href="#">DIPLOMA ENGG. CSE</a></li>
+                        <li><a href="#">MCA</a></li>
+                        <li><a href="#">BCA</a></li>
+                      </ul>
+                    </li>
+
+                    <li>
+                      <a href="#">Dept.OF MINING</a>
+                      <ul class="third-level-menu">
+                        <li><a href="#">BTECH MINING</a></li>
+                        <li><a href="#">DIPLOMA ENGG. MINING</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF PHARMACY</a>
+                      <ul class="third-level-menu">
+                        <li><a href="#">B.PHARMA</a></li>
+                        <li><a href="#">D.PHARMA</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF LAW</a>
+                      <ul class="third-level-menu">
+                        <li><a href="#">BA-LLB</a></li>
+                        <li><a href="../html_file/timetable.html">LLB</a></li>
+                        <li><a href="#">LLM</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept.OF AGRICULTURE</a>
+                      <ul class="third-level-menu">
+                        <li><a href="#">M.Sc</a></li>
+                        <li><a href="#">B.Sc</a></li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept. OF MANAGEMENT</a>
+                      <ul class="third-level-menu">
+                        <li><a href="#">M.COM</a></li>
+                        <li><a href="#">MBA</a></li>
+                        <li><a href="#">BBA</a></li>
+                        <li><a href="#">B.COM</a></li>
+
+                      </ul>
+                    </li>
+                    <li>
+                      <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                      <ul class="third-level-menu">
+                        <li><a href="#">BMLT</a></li>
+                        <li><a href="#">BPT</a></li>
+
+                      </ul>
+                    </li>
+
+                  </ul>
+                </li>
+
+              </ul>
+            </div>
+
+
+            <div class="net">
+              <span class="material-icons-sharp">router</span>
+              <h2>Report</h2>
+
+              <div class="progress">
+                <svg>
+                  <circle cx="38" cy="38" r="36"></circle>
+                </svg>
+                <div class="number">
+                  <p>92%</p>
+                </div>
+              </div>
+              <small class="text-muted">Last 24 Hours</small>
+            </div>
+          </div>
+          <br><br>
+        </mMarks_panding_report.html
+      <div class="list">
+        <ul class="last2">
+          <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+          <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <!-- Add more social media icons as needed -->
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="timeTable.js"></script>
+  <script src="../javas/app.js"></script>
+  <script type="text/javascript">
+    function toggle() {
+      var blur = document.getElementById('blur');
+      blur.classList.toggle('active');
+      var popup = document.getElementById('popup');
+      popup.classList.toggle('active');
+    }
+
+  </script>
+</body>
+
+</html>

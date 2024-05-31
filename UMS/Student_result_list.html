@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>result list</title>
+    <link rel="stylesheet" href="../style/Student_result_list.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/exam_dashboad.css">
+    <link rel="stylesheet" href="../style/Student_result_list.css">
+</head>
+<body>
+  <header>
+    <div class="logo" title="University Management System">
+      <img src="../image/logo1.jpg" alt="">
+      <a href="../index.html">
+        <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+      </a>
+    </div>
+    <div class="navbar">
+      <a href="exam_dashboad.html" class="active">
+        <span class="material-icons-sharp">home</span>
+        <h3>Examination</h3>
+      </a>
+      <a href="timetable.html" onclick="timeTableAll()">
+        <span class="material-icons-sharp">today</span>
+        <h3>Time Table</h3>
+      </a>
+      <a href="exam.html">
+        <span class="material-icons-sharp">grid_view</span>
+        <h3></h3>
+      </a>
+      <a href="password.html">
+        <span class="ri-honour-line " style="font-size: 20px;font-weight: 500;"></span>
+
+        <h3>Semester</h3>
+      </a>
+      <a href="../index.html">
+        <span class="material-icons-sharp" onclick="">logout</span>
+        <h3>Logout</h3>
+      </a>
+    </div>
+    <div id="profile-btn">
+      <span class="material-icons-sharp">person</span>
+    </div>
+    <div class="theme-toggler">
+      <span class="material-icons-sharp active">light_mode</span>
+      <span class="material-icons-sharp">dark_mode</span>
+    </div>
+
+  </header><br><br><br><br>
+  <div id="heading"><h1 >Student Result List </h1></div>
+  <button class="block" onclick="location.assign('result.html');">Print</button>
+    <div id="result-list">
+        <div class="result" onclick="showResult('')">
+          <img src="../image/student.png" alt="Student1">
+          <p>Student1 <br>001</p>
+        </div>
+        <div class="result" onclick="showResult('Student2')">
+          <img src="../image/student.png" alt="Student2">
+          <p>Student2 <br>002</p>
+        </div>
+        <div class="result" onclick="showResult('Student1')">
+            <img src="../image/student.png" alt="Student1">
+            <p>Student3 <br>003</p>
+          </div>
+          <div class="result" onclick="showResult('Student2')">
+            <img src="../image/student.png" alt="Student2">
+            <p>Student4 <br>004</p>
+          </div>
+          <div class="result" onclick="showResult('Student1')">
+            <img src="../image/student.png" alt="Student1">
+            <p>Student5 <br>005</p>
+          </div>
+          <div class="result" onclick="showResult('Student2')">
+            <img src="../image/student.png" alt="Student2">
+            <p>Student5 <br>006</p>
+          </div>
+          <div class="result" onclick="showResult('Student1')">
+            <img src="../image/student.png" alt="Student1">
+            <p>Student6 <br>007</p>
+          </div>
+          <div class="result" onclick="showResult('Student2')">
+            <img src="../image/student.png" alt="Student2">
+            <p>Student7 <br>008</p>
+          </div>
+          <div class="result" onclick="showResult('Student1')">
+            <img src="../image/student.png" alt="Student1">
+            <p>Student8 <br>009</p>
+          </div>
+          <div class="result" onclick="showResult('Student2')">
+            <img src="../image/student.png" alt="Student2">
+            <p>Student9 <br>010</p>
+          </div>
+          <div class="result" onclick="showResult('Student1')">
+            <img src="../image/student.png" alt="Student1">
+            <p>Student10 <br>011</p>
+          </div>
+          <div class="result" onclick="showResult('Student2')">
+            <img src="../image/student.png" alt="Student2">
+            <p>Student11 <br>012</p>
+          </div>
+          <div class="result" onclick="showResult('Student1')">
+            <img src="../image/student.png" alt="Student1">
+            <p>Student12 <br>013</p>
+          </div>
+          <div class="result" onclick="showResult('Student2')">
+            <img src="../image/student.png" alt="Student2">
+            <p>Student13 <br>014</p>
+          </div>
+          
+        <!-- Add more results here -->
+      </div>
+      <div class="footer">
+
+
+        <div class="last1">
+          <h3>MARSHAI -UMS</h3>
+          <h4>copyright <i class="ri-copyright-line"></i>All Right Reserved 2024<i class="ri-registered-line"></i>
+          </h4>
+  
+        </div>
+      <script src="../javas/Student_result_list.js"></script>
+      <script>
+        function showResult(student) {
+    // Redirect to the result page of the student
+    window.location.href = `semester_result.html`;
+
+  }
+  
+      </script>
+</body>
+</html>

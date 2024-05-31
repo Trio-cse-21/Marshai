@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/exam_dashboad.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, p {
+            margin: 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f9f9f9;
+        }
+        .button-container {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+        }
+        .button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo" title="University Management System">
+          <img src="../image/logo1.jpg" alt="">
+          <a href="../index.html">
+            <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+          </a>
+        </div>
+        <div class="navbar">
+          <a href="exam_dashboad.html" class="active">
+            <span class="material-icons-sharp">home</span>
+            <h3>Examination</h3>
+          </a>
+          <a href="timetable.html" onclick="timeTableAll()">
+            <span class="material-icons-sharp">today</span>
+            <h3>Time Table</h3>
+          </a>
+          <a href="exam.html">
+            <span class="material-icons-sharp">grid_view</span>
+            <h3></h3>
+          </a>
+          <a href="password.html">
+            <span class="ri-honour-line " style="font-size: 20px;font-weight: 500;"></span>
+  
+            <h3>Semester</h3>
+          </a>
+          <a href="../index.html">
+            <span class="material-icons-sharp" onclick="">logout</span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+        <div id="profile-btn">
+          <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+          <span class="material-icons-sharp active">light_mode</span>
+          <span class="material-icons-sharp">dark_mode</span>
+        </div>
+  
+      </header>
+    <div class="container">
+        <h1>Student List</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Registration No.</th>
+                    <th>10th Marks</th>
+                    <th>12th/Diploma Marks</th>
+                    <th>10th School</th>
+                    <th>12th College</th>
+                    <th>Division of 12th</th>
+                    <th>Phone No.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Add student data rows here -->
+                <tr>
+                    <td>John Doe</td>
+                    <td>12345</td>
+                    <td>95%</td>
+                    <td>85%</td>
+                    <td>ABC High School</td>
+                    <td>XYZ College</td>
+                    <td>First</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>12345</td>
+                    <td>95%</td>
+                    <td>85%</td>
+                    <td>ABC High School</td>
+                    <td>XYZ College</td>
+                    <td>First</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>12345</td>
+                    <td>95%</td>
+                    <td>85%</td>
+                    <td>ABC High School</td>
+                    <td>XYZ College</td>
+                    <td>First</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>12345</td>
+                    <td>95%</td>
+                    <td>85%</td>
+                    <td>ABC High School</td>
+                    <td>XYZ College</td>
+                    <td>First</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>12345</td>
+                    <td>95%</td>
+                    <td>85%</td>
+                    <td>ABC High School</td>
+                    <td>XYZ College</td>
+                    <td>First</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <tr>
+                    <td>John Doe</td>
+                    <td>12345</td>
+                    <td>95%</td>
+                    <td>85%</td>
+                    <td>ABC High School</td>
+                    <td>XYZ College</td>
+                    <td>First</td>
+                    <td>123-456-7890</td>
+                </tr>
+                <!-- Add more student data rows as needed -->
+            </tbody>
+        </table>
+
+        <div class="button-container">
+            <button class="button" onclick="window.location.href='Result.html';">Result</button>
+            <button class="button" onclick="location.assign('https://edu.google.com/workspace-for-education/classroom/');">Result</button>
+            
+        </div>
+    </div>
+    <div class="footer">
+
+
+        <div class="last1">
+          <h3>MARSHAI -UMS</h3>
+          <h4>copyright <i class="ri-copyright-line"></i>All Right Reserved 2024<i class="ri-registered-line"></i>
+          </h4>
+  
+        </div>
+</body>
+</html>

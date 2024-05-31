@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Consolidation Report</title>
+    <link rel="stylesheet" href="../style/Result_Consolidation_Report.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../style/exam_dashboad.css">
+    <link rel="stylesheet" href="../style/Result_Consolidation_Report.css">
+</head>
+<body>
+    <header>
+        <div class="logo" title="University Management System">
+          <img src="../image/logo1.jpg" alt="">
+          <a href="../index.html">
+            <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+          </a>
+        </div>
+        <div class="navbar">
+          <a href="exam_dashboad.html" class="active">
+            <span class="material-icons-sharp">home</span>
+            <h3>Examination</h3>
+          </a>
+          <a href="timetable.html" onclick="timeTableAll()">
+            <span class="material-icons-sharp">today</span>
+            <h3>Time Table</h3>
+          </a>
+          <a href="exam.html">
+            <span class="material-icons-sharp">grid_view</span>
+            <h3></h3>
+          </a>
+          <a href="password.html">
+            <span class="ri-honour-line " style="font-size: 20px;font-weight: 500;"></span>
+  
+            <h3>Semester</h3>
+          </a>
+          <a href="../index.html">
+            <span class="material-icons-sharp" onclick="">logout</span>
+            <h3>Logout</h3>
+          </a>
+        </div>
+        <div id="profile-btn">
+          <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+          <span class="material-icons-sharp active">light_mode</span>
+          <span class="material-icons-sharp">dark_mode</span>
+        </div>
+  
+      </header><br><br>
+        
+      <div class="container">
+        <h1>Result Result_consdration_report </h1>
+        <div class="header-info">
+            <div class="header-info-container">
+                <div><strong>Department:</strong> <input type="text" id="program" placeholder="csit"></div>
+                <div><strong>Program:</strong> <input type="text" id="program" placeholder=" Bachelor of Science"></div>
+                <div><strong>Branch:</strong> <input type="text" id="branch" placeholder=" cse"></div>
+                <div><strong>Semester:</strong> <input type="text" id="specialization" placeholder=" semester1"></div>
+                <div><strong>Session:</strong> <input type="text" id="session" placeholder="Session: 2023-2024"></div>
+                <div><strong>Exam Type:</strong> <input type="text" id="examType" placeholder="Semester Final"></div>
+            </div>
+        </div>
+        <h1>Student List</h1>
+        <table id="resultsTable">
+            <thead>
+                <tr>
+                    <th>S-NO</th>
+                    <th>Course code</th>
+                    <th>Cource name</th>
+                    <th>Check</th>
+                   
+                </tr>
+            </thead>
+            <tbody id="resultsBody">
+                <!-- Rows will be populated by JavaScript -->
+            </tbody>
+        </table>
+        <a href="#" id="downloadLink" class="download-btn">Download list</a>
+    </div>
+
+    
+                <button id="add-row-btn">Add Row</button>
+           
+        <button id="print-btn">Print</button>
+    </main>
+    <div class="footer">
+
+
+      <div class="last1">
+        <h3>MARSHAI -UMS</h3>
+        <h4>copyright <i class="ri-copyright-line"></i>All Right Reserved 2024<i class="ri-registered-line"></i>
+        </h4>
+
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const results = [
+                { SNO: '1' ,Course_code: 'Alice', Course_name: '101', Check:'click here'  },
+                { SNO: '2', Course_code: 'Bob', Cousce_name: '102', Check: 'click here'},
+                { SNO: '3', Course_code: 'Charlie', Course_name: '103', Check:'click here' },
+                { SNO: '4', Course_code: 'David', Course_name: '104', Check: 'click here' },
+                // Add more student results here
+            ];
+
+            const resultsBody = document.getElementById('resultsBody');
+
+            // Function to populate the table with results
+            function populateTable() {
+                results.forEach((result, index) => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${index + 1}</td>
+                        <td>${result.Course_code}</td>
+                        <td>${result.Cource_name}</td>
+                        <td><a href="${result.Check}" target="_blank">View Mark Sheet</a></td>
+                      
+                    `;
+                    resultsBody.appendChild(row);
+                });
+            }
+
+            // Function to generate CSV content
+            function generateCSVContent() {
+                // Get header information
+                const headerInfo = document.querySelectorAll('.header-info-container input');
+                const headerInfoArray = Array.from(headerInfo).map(input => `${input.previousElementSibling.textContent.trim()}: ${input.value}`);
+
+                // Get table data
+                const tableRows = Array.from(document.querySelectorAll('#resultsBody tr'));
+                const rowDataArray = tableRows.map(row => {
+                    const rowData = Array.from(row.children).map(cell => cell.textContent.trim());
+                    return rowData.join(',');
+                });
+
+                // Combine header information and table data
+                const csvContent = headerInfoArray.join('\n') + '\n' + rowDataArray.join('\n');
+
+                return "data:text/csv;charset=utf-8," + csvContent;
+            }
+
+            // Event listener for download button
+            document.getElementById('downloadLink').addEventListener('click', function() {
+                const csvContent = generateCSVContent();
+
+                const encodedUri = encodeURI(csvContent);
+                const link = document.createElement("a");
+                link.setAttribute("href", encodedUri);
+                link.setAttribute("download", "college_results.csv");
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            });
+
+            // Populate the table initially
+            populateTable();
+        });
+    </script>
+    <script src="../javas/Result_consdration_report.js"></script>
+</body>
+</html>
