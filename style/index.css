@@ -1,0 +1,189 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-seri2;
+    background-image: url("../image/darkbook.jpg");
+    background-repeat: no-repeat;
+  background-color: #cccccc;
+  background-size: cover;
+
+}
+img:hover{
+    opacity: 1.0;
+}
+
+.box {
+    position: relative;
+    width: 370px;
+    height: 550px;
+    background: rgba(0, 0, 0, 0.324);
+    border-radius: 50px 5px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.inner-box {
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+    width: 360px;
+    height: 540px;
+    margin: 5px;
+    background: rgba(65, 58, 58, 0.302);
+    border-radius: 50px 5px;
+    overflow: hidden;
+    padding: 30px;
+}
+
+h2 {
+    color: #45f3ff;
+    text-shadow: 0 4px 10px #45f3ff;
+}
+
+label {
+    font-size: 15px;
+    font-weight: 600;
+    color: rgb(146, 164, 169);
+}
+
+input {
+    box-sizing: border-box;
+    margin: 7px 0px;
+    background-color: rgb(118, 116, 116);
+    width: 100%;
+    padding: 10px 5px 10px 15px;
+    border-radius: 20px;
+    color: rgb(229, 223, 223);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+::placeholder {
+    color: rgb(229, 223, 223);
+    /* Change this to your desired color */
+    opacity: 1;
+    /* Fix for Firefox (which adds lower opacity to the placeholder) */
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    background-color: #45f3ff;
+    color: black;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 20px 0 #45f3ff;
+}
+
+button:hover{
+    box-shadow: 0 6px 20px 5px #22ecfb;
+}
+
+span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #45f3ff;
+}
+
+a {
+    font-size: 15px;
+    font-weight: 600;
+    color: #d9138a;
+    text-decoration: none;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg, transparent, #45f3ff2c, #45f3ff2a);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 370px;
+    height: 450px;
+    background: linear-gradient(60deg, transparent, #d9138a16, #d9138a23);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+.footer {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(162, 162, 248);
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+}
+
+.last1 {
+    width: 50%;
+    text-align: right;
+    justify-content: center;
+    padding-right: 10px;
+    display: flex;
+    gap: 50px;
+    
+
+}
+h3,h4{
+    font-size: 15px;
+    font-weight: 600;
+    color: #070808;
+    text-align:right;
+    justify-content: center;
+    padding-right: 10px;
+    display: flex;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* Add media queries for responsiveness */
+
+/* For screens smaller than 768px (tablets and mobiles) */
+@media (max-width: 767.98px) {
+    .box,
+    .inner-box {
+        height: 30vh; /* Adjust the height to be relative to the viewport height */
+    }
+}
+
+/* For screens smaller than 480px (small mobiles) */
+@media (max-width: 479.98px) {
+    .box,
+    .inner-box {
+        height: 20vh; /* Adjust the height to be relative to the viewport height */
+    }
+}
+@media (max-width: 768px) {
+    #company {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+

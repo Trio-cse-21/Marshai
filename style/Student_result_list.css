@@ -1,0 +1,133 @@
+body{
+  font-family: 'Poppins', sans-serif;
+	font-size: .88rem;
+	background: var(--color-background);
+	user-select: none;
+	overflow-x: hidden;
+	color: var(--color-dark);
+  background-color: antiquewhite;
+}
+
+
+h1{
+  font-weight: 800;
+  font-size: 1.8rem;
+  background-color: burlywood;
+  color: var(--color-dark);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+
+}
+#result-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 20px;
+    width: 100%;
+
+  }
+  
+  .result {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+    background-color: aqua;
+  }
+  
+  .result:hover {
+    transform: scale(1.05);
+  }
+  
+  .result img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .result p {
+    margin: 5px 0;
+    text-align: center;
+  }
+  
+    #result-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .result {
+        width: 200px;
+        height: 250px;
+        border: 1px solid #ccc;
+        margin: 10px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .result img {
+        width: 100%;
+        height: auto;
+    }
+
+    .result p {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 5px;
+        margin: 0;
+        text-align: center;
+    }
+
+    .result:hover {
+        cursor: pointer;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .selected {
+        border-color: #f00;
+    }
+
+    .selected:before {
+        content: "Selected";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #f00;
+        color: #fff;
+        padding: 5px;
+        margin: 0;
+        text-align: center;
+    }
+    .block {
+      display: block;
+      width: 10%;
+      border: none;
+      background-color: #04AA6D;
+      color: white;
+      padding: 14px 28px;
+      font-size: 16px;
+      cursor: pointer;
+      float: right;
+      margin-right: 10px;
+      border-radius: 10px;
+      
+    }
+    
+    .block:hover {
+      background-color: #ddd;
+      color: black;
+    }
