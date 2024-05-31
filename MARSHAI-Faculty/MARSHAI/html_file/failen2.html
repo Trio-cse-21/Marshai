@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance Management</title>
+<style>
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+    }
+    .student-list {
+        list-style-type: none;
+        padding: 0;
+    }
+    .student-list li {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        position: relative;
+    }
+    .student-list li img {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+        object-fit: cover;
+        object-position: center;
+        margin-right: 20px;
+    }
+    .student-details {
+        text-align: left;
+        flex-grow: 1;
+        min-width: 0;
+    }
+    .student-details span {
+        display: block;
+        word-wrap: break-word;
+    }
+    .btn-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+    .btn {
+        padding: 8px 20px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-top: 10px;
+    }
+    .btn-absent {
+        background-color: #f44336;
+    }
+    .btn:active {
+        background-color: #3e8e41;
+    }
+    .btn.disabled {
+        background-color: gray;
+        cursor: not-allowed;
+    }
+    .present {
+        background-color: rgba(76, 175, 80, 0.5);
+    }
+    .absent {
+        background-color: rgba(244, 67, 54, 0.5);
+    }
+    .permanent-present {
+        background-color: rgba(0, 128, 0, 0.8);
+    }
+    .permanent-absent {
+        background-color: rgba(128, 0, 0, 0.8);
+    }
+    .perm-submit-btn {
+        margin-top: 20px;
+        background-color: #3F51B5;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h2>Attendance Management</h2>
+    <ul class="student-list">
+        <li>
+            <img src="default.jpg" alt="Default Photo">
+            <div class="student-details">
+                <span>Student 1</span><br>
+                <span>Grade: A</span><br>
+                <span>Age: 18</span>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-present" onclick="markAttendance('present', this)">Present</button>
+                <button class="btn btn-absent" onclick="markAttendance('absent', this)">Absent</button>
+            </div>
+        </li>
+        <li>
+            <img src="default.jpg" alt="Default Photo">
+            <div class="student-details">
+                <span>abhinav kumar singh </span><br>
+                <span>Grade: B</span><br>
+                <span>Age: 17</span>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-present" onclick="markAttendance('present', this)">Present</button>
+                <button class="btn btn-absent" onclick="markAttendance('absent', this)">Absent</button>
+            </div>
+        </li>
+        <li>
+            <img src="img/Sensei 🙏🏼.jpg" alt="Default Photo">
+            <div class="student-details">
+                <span>Student 3</span><br>
+                <span>Grade: C</span><br>
+                <span>Age: 16</span>
+            </div>
+            <div class="btn-container">
+                <button class="btn btn-present" onclick="markAttendance('present', this)">Present</button>
+                <button class="btn btn-absent" onclick="markAttendance('absent', this)">Absent</button>
+            </div>
+        </li>
+        <!-- Add more students as needed -->
+    </ul>
+    <button class="btn perm-submit-btn" onclick="submitPermanentAttendance()">Submit Attendance</button>
+</div>
+
+<script>
+    function markAttendance(status, button) {
+        var student = button.closest('li');
+        if (status === 'present') {
+            student.classList.add('present');
+            student.classList.remove('absent');
+            student.style.backgroundColor = "rgba(76, 175, 80, 0.5)";
+        } else {
+            student.classList.add('absent');
+            student.classList.remove('present');
+            student.style.backgroundColor = "rgba(244, 67, 54, 0.5)";
+        }
+    }
+
+    function submitPermanentAttendance() {
+        var buttons = document.querySelectorAll('.btn-present, .btn-absent');
+        buttons.forEach(button => {
+            button.disabled = true;
+            button.classList.add('disabled');
+        });
+        var students = document.querySelectorAll('.student-list li');
+        students.forEach(student => {
+            if (student.classList.contains('present')) {
+                student.classList.add('permanent-present');
+                student.classList.remove('present');
+                student.style.backgroundColor = "rgba(0, 128, 0, 0.8)";
+            } else if (student.classList.contains('absent')) {
+                student.classList.add('permanent-absent');
+                student.classList.remove('absent');
+                student.style.backgroundColor = "rgba(128, 0, 0, 0.8)";
+            }
+        });
+        alert('Attendance has been submitted! No further changes are allowed.');
+    }
+</script>
+
+</body>
+</html>

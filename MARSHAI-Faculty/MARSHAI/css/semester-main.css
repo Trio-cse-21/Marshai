@@ -1,0 +1,71 @@
+#faculty-finance-css {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+#faculty-finance-css .container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+    width: 100%;
+}
+
+#faculty-finance-css.h1 {
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #000000;
+    text-align: center;
+}
+
+#faculty-finance-css .current-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+#faculty-finance-css .info-box {
+    background: rgb(162, 162, 248);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 70%;
+    margin: 10px;
+    text-align: center;
+    box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.5),
+                7px 7px 20px rgba(0, 0, 0, 0.1),
+                4px 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+#faculty-finance-css .info-box h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+
+#faculty-finance-css .history-section {
+    margin-top: 20px;
+}
+
+#faculty-finance-css table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#faculty-finance-css th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+} 
+
+#faculty-finance-css th {
+    background: rgb(162, 162, 248);
+    color: #fff;
+}
+
+#faculty-finance-css tbody tr:nth-child(even) {
+    background: #f9f9f9;
+}

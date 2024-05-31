@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grievance Display</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ccc;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .profile-pic {
+            width: 50px; /* Adjust the width as needed */
+            height: 50px; /* Adjust the height as needed */
+            border-radius: 5px; /* Changed border-radius to 5px for square shape */
+            object-fit: cover; /* This line ensures the image maintains its aspect ratio */
+        }
+        .description {
+            text-align: justify;
+        }
+        .btn {
+            padding: 5px 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 3px;
+            color: #fff;
+        }
+        .btn-view {
+            background-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Grievance Display</h1>
+    </header>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Profile Picture</th>
+                    <th>Name</th>
+                    <th>Grievance Type</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><img class="profile-pic" src="profile_picture.jpg" alt="Profile Picture"></td>
+                    <td>John Doe</td>
+                    <td>Harassment by supervisor</td>
+                    <td class="description">John has reported several instances where his supervisor has made inappropriate comments and exhibited threatening behavior towards him.</td>
+                    <td>2024-05-10</td>
+                    <td>
+                        <button class="btn btn-view" onclick="viewDetails(this)">View Details</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td><img class="profile-pic" src="img/Sensei 🙏🏼.jpg" alt="Profile Picture"></td>
+                    <td>Jane Smith</td>
+                    <td>Discrimination in workplace</td>
+                    <td class="description">Jane has observed and experienced discriminatory practices in the workplace based on her gender and has documented specific instances.</td>
+                    <td>2024-05-15</td>
+                    <td>
+                        <button class="btn btn-view" onclick="viewDetails(this)">View Details</button>
+                    </td>
+                </tr>
+                <!-- Add more rows for additional grievances -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        function viewDetails(button) {
+            // Find the parent row of the button
+            var row = button.parentNode.parentNode;
+            // Get the grievance details
+            var grievance = row.cells[2].textContent;
+            var description = row.cells[3].textContent;
+            // You can do whatever you want with the grievance details, for example, display in an alert
+            alert("Grievance Details:\n\n" + grievance + "\n\nDescription:\n\n" + description);
+        }
+    </script>
+</body>
+</html>

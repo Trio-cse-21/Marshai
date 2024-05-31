@@ -1,0 +1,196 @@
+.top-level-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .top-level-menu > li {
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 200px;
+    background: #7380ec;
+    z-index: 100;
+  }
+  
+  .top-level-menu > li:hover {
+    background: #d9dbf8;
+  }
+  
+  .top-level-menu li:hover > ul {
+    /* On hover, display the next level's menu */
+    display: block;
+  }
+  
+  .second-level-menu {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  
+  .second-level-menu > li {
+    position: relative;
+    height: 30px;
+    background: #7380ec;
+  }
+  
+  .second-level-menu > li:hover {
+    background: #d9dbf8;
+  }
+  
+  .third-level-menu {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  
+  .third-level-menu > li {
+    height: 30px;
+    background: #7380ec;
+  }
+  
+  .third-level-menu > li:hover {
+    background: #d9dbf8;
+  }
+  
+  .forth-level-menu {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 200px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+  }
+  
+  .forth-level-menu > li {
+    height: 30px;
+    background: #7380ec;
+  }
+  
+  .forth-level-menu > li:hover {
+    background: #d9dbf8;
+  }
+  
+  .top-level-menu a {
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+    display: block;
+    line-height: 30px;
+  }
+  
+  .top-level-menu a:hover {
+    color: #000000;
+  }
+  
+
+/* teacher subject css ---------- */
+#lock {
+  /* background-color: red; */
+  position: absolute;
+  padding: 40px 80px;
+  background-color: #d9dbf8;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+#h ul {
+  padding-left: 30px;
+  /* background-color: blueviolet; */
+}
+#subjects ul {
+  padding-left: 30px;
+  /* background-color: blueviolet; */
+}
+#resources ul {
+  padding-left: 30px;
+  /* background-color: blueviolet; */
+}
+
+/* internal test dashboard css */
+/* styles.css */
+
+.test {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+}
+
+.nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav li {
+  margin-right: 20px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em;
+}
+
+.section {
+  background-color: #f7f7f7;
+  padding: 1em;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.h2 {
+  margin-top: 0;
+}
+
+.ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.li {
+  margin-bottom: 20px;
+}
+
+.h3 {
+  margin-top: 0;
+}
+
+.button {
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #3e8e41;
+}
+
+

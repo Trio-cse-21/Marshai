@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Faculty Dashboard</title>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="shortcut icon" href="./images/logo.png">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    #blur {
+      flex: 1;
+      position: relative;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 60px;
+      width: 100%;
+      background-color: rgb(162, 162, 248);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .footer h3,
+    .footer h4 {
+      margin: 0;
+      color: black;
+      /* Change font color to black */
+    }
+
+    .last1 {
+      flex: 1;
+      text-align: center;
+    }
+
+    .last2 {
+      flex: 1;
+      width: 50px;
+      display: flex;
+      justify-content: center;
+      /* Center-align social media icons */
+      align-items: center;
+      /* Align vertically center */
+      gap: 10px;
+    }
+
+    .last2 a {
+      color: black;
+      /* Change icon color to black */
+      font-size: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="blur">
+    <header>
+      <div class="logo" title="University Management System">
+        <img src="../images/logo.png" alt="">
+        <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+      </div>
+      <div class="navbar">
+        <a href="index.html" id="home">
+          <span class="material-icons-sharp">home</span>
+          <h3>Home</h3>
+        </a>
+        <a href="timetable.html" id="timetable" onclick="timeTableAll()">
+          <span class="material-icons-sharp">today</span>
+          <h3>Time Table</h3>
+        </a>
+        <a href="exam.html" id="exam">
+          <span class="material-icons-sharp">grid_view</span>
+          <h3>Examination</h3>
+        </a>
+        <a href="main-dashboard.html" id="dashboard" class="active2">
+          <span class="ri-honour-line " style="font-size: 20px;font-weight: 500;"></span>
+          <h3>Dashboard</h3>
+        </a>
+        <a href="#" id="logout" onclick="logout()">
+          <span class="material-icons-sharp">logout</span>
+          <h3>Logout</h3>
+        </a>
+      </div>
+      <div id="profile-btn">
+        <span class="material-icons-sharp">person</span>
+      </div>
+      <div class="theme-toggler">
+        <span class="material-icons-sharp active">light_mode</span>
+        <span class="material-icons-sharp">dark_mode</span>
+      </div>
+    </header>
+<div id="animation-flower-div">
+    <div id="animation-flower">
+      <div class="flower">
+        <div class="f-wrapper">
+          <div class="flower__line"></div>
+          <div class="f">
+            <div class="flower__leaf flower__leaf--1"></div>
+            <div class="flower__leaf flower__leaf--2"></div>
+            <div class="flower__leaf flower__leaf--3"></div>
+            <div class="flower__leaf flower__leaf--4"></div>
+            <div class="flower__leaf flower__leaf--5"></div>
+            <div class="flower__leaf flower__leaf--6"></div>
+            <div class="flower__leaf flower__leaf--7"></div>
+            <div class="flower__leaf flower__leaf--8 flower__fall-down--yellow"></div>
+          </div>
+        </div>
+
+        <div class="f-wrapper f-wrapper--2">
+          <div class="flower__line"></div>
+          <div class="f">
+            <div class="flower__leaf flower__leaf--1"></div>
+            <div class="flower__leaf flower__leaf--2"></div>
+            <div class="flower__leaf flower__leaf--3"></div>
+            <div class="flower__leaf flower__leaf--4"></div>
+            <div class="flower__leaf flower__leaf--5"></div>
+            <div class="flower__leaf flower__leaf--6"></div>
+            <div class="flower__leaf flower__leaf--7"></div>
+            <div class="flower__leaf flower__leaf--8 flower__fall-down--pink"></div>
+          </div>
+        </div>
+
+        <div class="f-wrapper f-wrapper--3">
+          <div class="flower__line"></div>
+          <div class="f">
+            <div class="flower__leaf flower__leaf--1"></div>
+            <div class="flower__leaf flower__leaf--2"></div>
+            <div class="flower__leaf flower__leaf--3"></div>
+            <div class="flower__leaf flower__leaf--4"></div>
+            <div class="flower__leaf flower__leaf--5"></div>
+            <div class="flower__leaf flower__leaf--6"></div>
+            <div class="flower__leaf flower__leaf--7"></div>
+            <div class="flower__leaf flower__leaf--8 flower__fall-down--purple"></div>
+          </div>
+        </div>
+        <div class="flower__glass"></div>
+      </div>
+
+
+    </div>
+    <div id="extra-div-drop">
+      <div id="dropdown-list-li">
+        <ul class="top-level-menu">
+          <li><a href="#">Select Department</a>
+
+            <ul class="second-level-menu">
+              <li>
+                <a href="#">Dept.OF CSE & IT</a>
+                <ul class="third-level-menu">
+                  <li><a href="#">BTECH CSE</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                      <li><a href="attendance-marking.html">Semester 7</a></li>
+                      <li><a href="attendance-marking.html">Semester 8</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">DIPLOMA ENGG. CSE</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+
+                    </ul>
+                  </li>
+                  <li><a href="#">MCA</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">BCA</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <a href="#">Dept.OF MINING</a>
+                <ul class="third-level-menu">
+                  <li><a href="#">BTECH MINING</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                      <li><a href="attendance-marking.html">Semester 7</a></li>
+                      <li><a href="attendance-marking.html">Semester 8</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">DIPLOMA ENGG. MINING</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Dept.OF PHARMACY</a>
+                <ul class="third-level-menu">
+                  <li><a href="#">B.PHARMA</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                      <li><a href="attendance-marking.html">Semester 7</a></li>
+                      <li><a href="attendance-marking.html">Semester 8</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">D.PHARMA</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Dept.OF LAW</a>
+                <ul class="third-level-menu">
+                  <li><a href="#">BA-LLB</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                      <li><a href="attendance-marking.html">Semester 7</a></li>
+                      <li><a href="attendance-marking.html">Semester 8</a></li>
+                      <li><a href="attendance-marking.html">Semester 9</a></li>
+                      <li><a href="attendance-marking.html">Semester 10</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">LLB</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">LLM</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Dept.OF AGRICULTURE</a>
+                <ul class="third-level-menu">
+                  <li><a href="#">M.Sc</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">B.Sc</a>
+
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                      <li><a href="attendance-marking.html">Semester 7</a></li>
+                      <li><a href="attendance-marking.html">Semester 8</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li>
+                <a href="#">Dept. OF MANAGEMENT</a>
+                <ul class="third-level-menu">
+                  <li><a href="#">M.COM</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">MBA</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">BBA</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">B.COM</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li>
+                <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                <ul class="third-level-menu">
+                  <li><a href="#">BMLT</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="#">BPT</a>
+                    <ul class="forth-level-menu">
+                      <li><a href="attendance-marking.html">Semester 1</a></li>
+                      <li><a href="attendance-marking.html">Semester 2</a></li>
+                      <li><a href="attendance-marking.html">Semester 3</a></li>
+                      <li><a href="attendance-marking.html">Semester 4</a></li>
+                      <li><a href="attendance-marking.html">Semester 5</a></li>
+                      <li><a href="attendance-marking.html">Semester 6</a></li>
+                      <li><a href="attendance-marking.html">Semester 7</a></li>
+                      <li><a href="attendance-marking.html">Semester 8</a></li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="footer">
+      <div class="last1">
+        <h3>MARSHAI - UMS</h3>
+        <h4>&copy; All Rights Reserved 2024</h4>
+      </div>
+      <div class="last2">
+        <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+        <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+        <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <!-- Add more social media icons as needed -->
+      </div>
+    </div>
+
+    <script src="../javaScript/timeTable.js"></script>
+    <script src="../javaScript/app.js"></script>
+    <script type="text/javascript">
+      function toggle() {
+        var blur = document.getElementById('blur');
+        blur.classList.toggle('active');
+        var popup = document.getElementById('popup');
+        popup.classList.toggle('active');
+      }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teachers Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        #blur {
+            flex: 1;
+            position: relative;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 60px;
+            width: 100%;
+            background-color: rgb(162, 162, 248);
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .footer h3,
+        .footer h4 {
+            margin: 0;
+            color: black; /* Change font color to black */
+        }
+
+        .last1 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .last2 {
+            flex: 1;
+            width: 50px;
+            display: flex;
+            justify-content: center; /* Center-align social media icons */
+            align-items: center; /* Align vertically center */
+            gap: 10px;
+        }
+
+        .last2 a {
+            color: black; /* Change icon color to black */
+            font-size: 20px;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div id="blur">
+        <header>
+            <div class="logo" title="University Management System">
+                <img src="../images/logo.png" alt="">
+                <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+            </div>
+            <div class="navbar">
+                <a href="index.html" id="home" class="active2">
+                  <span class="material-icons-sharp">home</span>
+                  <h3>Home</h3>
+                </a>
+                <a href="timetable.html" id="timetable" onclick="timeTableAll()">
+                  <span class="material-icons-sharp">today</span>
+                  <h3>Time Table</h3>
+                </a>
+                <a href="exam.html" id="exam">
+                  <span class="material-icons-sharp">grid_view</span>
+                  <h3>Examination</h3>
+                </a>
+                <a href="main-dashboard.html" id="dashboard">
+                  <span class="ri-honour-line " style="font-size: 20px;font-weight: 500;"></span>
+                  <h3>Dashboard</h3>
+                </a>
+                <a href="#" id="logout" onclick="logout()">
+                  <span class="material-icons-sharp">logout</span>
+                  <h3>Logout</h3>
+                </a>
+              </div>
+            <div id="profile-btn">
+                <span class="material-icons-sharp">person</span>
+            </div>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+
+        </header>
+        <div class="container">
+            <aside>
+                <div class="profile">
+                    <div class="top">
+                        <div class="profile-photo">
+                            <img src="./images/profile-1.jpg" alt="">
+                        </div>
+                        <div class="info">
+                            <p>Hey, <b>Awesh</b> </p>
+                            <small class="text-muted">Faculty no. 5922</small>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <h5>Course</h5>
+                        <p>BTech. Computer Science & Engineering <br> Management</p>
+                        <h5>Date of joinning</h5>
+                        <p>29-feb-2023</p>
+                        <h5>Contact</h5>
+                        <p>9304203985</p>
+                        <h5>Email</h5>
+                        <p>awesh8work@gmail.com</p>
+                        <h5>Address</h5>
+                        <p>RajaUlatu, Namkum, Ranchi</p>
+                    </div>
+                </div>
+            </aside>
+
+            <main>
+
+                <div class="card" style="width: rem;">
+                    <div class="card-body">
+                        <h1 class="card-title">My Institution</h1>
+                        <h2 class="card-subtitle mb-2 text-body-secondary"></h2>
+                        <p style="font-size: 15px;" class="card-subtitle mb-2 text-body-secondary">Lorem ipsum dolor
+                            sit,
+                            amet consectetur adipisicing elit. Voluptatum iusto, architecto culpa aut quidem,
+                            voluptatibus
+                            qui nulla placeat corrupti error cumque autem non, molestiae atque sapiente! Omnis libero
+                            aliquam ratione fugit alias eos quam esse nihil dolores suscipit veritatis, laborum sapiente
+                            odit provident! Quam, in. Rem aperiam sequi earum aliquam mollitia nobis quia ipsum delectus
+                            nemo modi, consequatur consectetur quos maiores doloremque. Maxime architecto, nesciunt,
+                            inventore debitis deleniti ducimus commodi voluptates deserunt dolorem qui maiores veniam
+                            iure
+                            illo! Architecto deleniti harum vel maxime. Earum culpa corrupti perferendis eum, porro
+                            natus
+                            tenetur excepturi numquam, unde ratione accusamus, nulla blanditiis vitae ullam.</p>
+                        <br>
+                        <a href="https://www.jru.edu.in/" class="card-link">JRU-Website</a>
+                        <a href="#" class="card-link"></a>
+                    </div>
+                </div>
+
+                <br>
+              
+                <div id="popup">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, quasi dolorum ea cupiditate
+                        dolorem, accusantium explicabo blanditiis eum, in officiis nesciunt quis saepe aut distinctio
+                        delectus vero. Commodi nesciunt sit, cupiditate eaque alias impedit maxime dolorem quis quas
+                        libero, aliquid nostrum nihil odio consectetur. Dolore maiores eaque nesciunt repellat aliquid?
+                    </p>
+                    <a href="#" onclick="toggle()">close</a>
+
+                </div>
+
+                <div class="timetable" id="timetable">
+                    <div>
+                        <span id="prevDay">&lt;</span>
+                        <h2>Today's Timetable</h2>
+                        <span id="nextDay">&gt;</span>
+                    </div>
+                    <span class="closeBtn" onclick="timeTableAll()">X</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Room No.</th>
+                                <th>Subject</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                
+                <br><br>
+            </main>
+
+
+            <div class="right">
+                <div class="announcements">
+                    <h2>Announcements</h2>
+                    <div class="updates">
+                        <div class="message">
+                            <p> <b>Academic</b> Summer training internship with Live Projects.</p>
+                            <small class="text-muted">2 Minutes Ago</small>
+                        </div>
+                        <div class="message">
+                            <p> <b>Co-curricular</b> Global internship oportunity by Student organization.</p>
+                            <small class="text-muted">10 Minutes Ago</small>
+                        </div>
+                        <div class="message">
+                            <p> <b>Examination</b> Instructions for Mid Term Examination.</p>
+                            <small class="text-muted">Yesterday</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leaves">
+                    <h2>Teachers on leave</h2>
+                    <div class="teacher">
+                        <div class="profile-photo"><img src="./imagenklhks/profile-2.jpeg" alt=""></div>
+                        <div class="info">
+                            <h3>The Professor</h3>
+                            <small class="text-muted">Full Day</small>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="profile-photo"><img src="./lkhlknimages/profile-3.jpg" alt=""></div>
+                        <div class="info">
+                            <h3>Lisa Manobal</h3>
+                            <small class="text-muted">Half Day</small>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="profile-photo"><img src="jhljkbl./images/profile-4.jpg" alt=""></div>
+                        <div class="info">
+                            <h3>Himanshu Jindal</h3>
+                            <small class="text-muted">Full Day</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+ <br><br><br>
+
+        <div class="footer">
+            <div class="last1">
+                <h3>MARSHAI - UMS</h3>
+                <h4>&copy; All Rights Reserved 2024</h4>
+            </div>
+            <div class="last2">
+                <a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                <!-- Add more social media icons as needed -->
+            </div>
+        </div>
+    
+        <script src="../javaScript/timeTable.js"></script>
+      <script src="../javaScript/app.js"></script>
+      <script type="text/javascript">
+        function toggle() {
+          var blur = document.getElementById('blur');
+          blur.classList.toggle('active');
+          var popup = document.getElementById('popup');
+          popup.classList.toggle('active');
+        }
+    
+      </script>
+    </body>
+    
+    </html>
+    
