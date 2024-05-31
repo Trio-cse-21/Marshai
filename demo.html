@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dash-1.css">
+    <link rel="stylesheet" href="">
+
+    <style>
+        body{
+    width: 100%;
+    min-height: 100vh;
+    background-image:url(images/cloud.jpg);
+    background-size: cover;
+    background-position: center;
+    
+        }
+        .footer {
+            height: 60px;
+            width: 100%;
+            background-color: rgb(162, 162, 248);
+        }
+
+        .last {
+            font-size: 15px;
+        }
+
+        .pop {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        #blur.active {
+            filter: blur(5px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        #popup {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            padding: 50px;
+            box-shadow: 0 5px 30px rgb(150, 150, 242);
+            background-color: white;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        #popup.active {
+            top: 50%;
+            visibility: hidden;
+            opacity: 1;
+            transition: 0.5s;
+        }
+
+        /* .menusimple {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .last1{
+            text-align: center;
+            justify-content: center;
+        } */
+        .footer {
+            display: flex;
+            padding: 10px;
+        }
+
+        .last1 {
+            width: 50%;
+            text-align: center;
+            justify-content: center;
+            padding-right: 10px;
+        }
+
+        .last2 {
+            width: 50%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding-left: 5px;
+            margin: 15% 60%;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="blur" >
+        <header>
+          <div class="logo" title="University Management System">
+            <img src="./images/logo.png" alt="">
+            <a href="dash-1.html">
+              <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+            </a>
+        </div>
+            <div class="navbar">
+                <a href="index.html" class="active">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Examination</h3>
+                </a>
+                <a href="timetable.html" onclick="timeTableAll()">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Time Table</h3>
+                </a>
+                <a href="exam.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3></h3>
+                </a>
+                <a href="password.html">
+                    <span class="ri-honour-line " style="font-size: 20px;font-weight: 500;"></span>
+
+                    <h3>Semester</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp" onclick="">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <div id="profile-btn">
+                <span class="material-icons-sharp">person</span>
+            </div>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+
+        </header>
+        
+        <div class="container">
+            <aside>
+                
+                <div class="profile">
+                    
+                </div>
+            </aside>
+            <!--Main Navigation-->
+
+    
+       <div class="margin1" style="margin-top: 50px;margin-left: 10%;">
+            <main style="justify-content: center;margin: auto;">
+                <h1>Dashboard <i class="ri-dashboard-horizontal-line"></i></h1>
+                 <div class="subjects">
+                    <div class="eg">
+                        <span class="material-icons-sharp">architecture</span>
+                        <h2>New Student Details</h2>
+                        <ul class="top-level-menu">
+                            <li><a href="#">Select Department</a>
+                        
+                              <ul class="second-level-menu">
+                                <li>
+                                  <a href="#">Dept.OF CSE & IT</a>
+                                  <ul class="third-level-menu">
+                                    <li>
+                                      <a href="#">BTECH CSE</a>
+                                      <ul class="Forth-level-menu">
+                                        <li><a href="../BLOG.html">Regular Student</a></li>
+                                        <li><a href="#">lateral entry Student</a></li>
+                                        <!-- Add more submenu items as needed -->
+                                      </ul>
+                                    </li>
+                                    
+                                    <li><a href="StIn.html">DIPLOMA ENGG. CSE</a></li>
+                                    <li><a href="StIn.html">MCA</a></li>
+                                    <li><a href="StIn.html">BCA</a></li>
+                                  </ul>
+                                </li>
+                              
+                                <li>
+                                  <a href="#">Dept.OF MINING</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="StIn.html">BTECH MINING</a></li>
+                                    <li><a href="StIn.html">DIPLOMA ENGG. MINING</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF PHARMACY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">B.PHARMA</a></li>
+                                    <li><a href="#">D.PHARMA</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF LAW</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BA-LLB</a></li>
+                                    <li><a href="../html_file/timetable.html">LLB</a></li>
+                                    <li><a href="#">LLM</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF AGRICULTURE</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.Sc</a></li>
+                                    <li><a href="#">B.Sc</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF MANAGEMENT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.COM</a></li>
+                                    <li><a href="#">MBA</a></li>
+                                    <li><a href="#">BBA</a></li>
+                                    <li><a href="#">B.COM</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BMLT</a></li>
+                                    <li><a href="#">BPT</a></li>
+                        
+                                  </ul>
+                                </li>
+                        
+                              </ul>
+                            </li>
+                        
+                          </ul>
+                            
+                        </div>
+
+
+
+                        <div class="eg">
+                            <span class="material-icons-sharp">architecture</span>
+                            <h2>Online & Offline Exam</h2>
+                            <ul class="top-level-menu">
+                                <li><a href="#">Select Department</a>
+                            
+                                  <ul class="second-level-menu">
+                                    <li>
+                                      <a href="#">Dept.OF CSE & IT</a>
+                                      <ul class="third-level-menu">
+                                        <li><a href="#">BTECH CSE</a></li>
+                                        <li><a href="#">DIPLOMA ENGG. CSE</a></li>
+                                        <li><a href="#">MCA</a></li>
+                                        <li><a href="#">BCA</a></li>
+                                      </ul>
+                                    </li>
+                                  
+                                    <li>
+                                      <a href="#">Dept.OF MINING</a>
+                                      <ul class="third-level-menu">
+                                        <li><a href="#">BTECH MINING</a></li>
+                                        <li><a href="#">DIPLOMA ENGG. MINING</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <a href="#">Dept.OF PHARMACY</a>
+                                      <ul class="third-level-menu">
+                                        <li><a href="#">B.PHARMA</a></li>
+                                        <li><a href="#">D.PHARMA</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <a href="#">Dept.OF LAW</a>
+                                      <ul class="third-level-menu">
+                                        <li><a href="#">BA-LLB</a></li>
+                                        <li><a href="../html_file/timetable.html">LLB</a></li>
+                                        <li><a href="#">LLM</a></li>
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <a href="#">Dept.OF AGRICULTURE</a>
+                                      <ul class="third-level-menu">
+                                        <li><a href="#">M.Sc</a></li>
+                                        <li><a href="#">B.Sc</a></li>
+                            
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <a href="#">Dept. OF MANAGEMENT</a>
+                                      <ul class="third-level-menu">
+                                        <li><a href="#">M.COM</a></li>
+                                        <li><a href="#">MBA</a></li>
+                                        <li><a href="#">BBA</a></li>
+                                        <li><a href="#">B.COM</a></li>
+                            
+                                      </ul>
+                                    </li>
+                                    <li>
+                                      <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                                      <ul class="third-level-menu">
+                                        <li><a href="#">BMLT</a></li>
+                                        <li><a href="#">BPT</a></li>
+                            
+                                      </ul>
+                                    </li>
+                            
+                                  </ul>
+                                </li>
+                            
+                              </ul>
+                                
+                            </div>
+
+
+
+
+                    <div class="mth">
+                        <span class="material-icons-sharp">functions</span>
+                        <h2>Marks Entry Pending Report</h2>
+                        <ul class="top-level-menu">
+                            <li><a href="#">Select Department</a>
+                        
+                              <ul class="second-level-menu">
+                                <li>
+                                  <a href="#">Dept.OF CSE & IT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH CSE</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. CSE</a></li>
+                                    <li><a href="#">MCA</a></li>
+                                    <li><a href="#">BCA</a></li>
+                                  </ul>
+                                </li>
+                              
+                                <li>
+                                  <a href="#">Dept.OF MINING</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH MINING</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. MINING</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF PHARMACY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">B.PHARMA</a></li>
+                                    <li><a href="#">D.PHARMA</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF LAW</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BA-LLB</a></li>
+                                    <li><a href="../html_file/timetable.html">LLB</a></li>
+                                    <li><a href="#">LLM</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF AGRICULTURE</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.Sc</a></li>
+                                    <li><a href="#">B.Sc</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF MANAGEMENT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.COM</a></li>
+                                    <li><a href="#">MBA</a></li>
+                                    <li><a href="#">BBA</a></li>
+                                    <li><a href="#">B.COM</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BMLT</a></li>
+                                    <li><a href="#">BPT</a></li>
+                        
+                                  </ul>
+                                </li>
+                        
+                              </ul>
+                            </li>
+                        
+                          </ul>
+                            
+                        
+                    </div>
+                    <div class="net">
+                        <span class="material-icons-sharp">router</span>
+                        <h2>Results Consolidation Report</h2>
+                        <ul class="top-level-menu">
+                            <li><a href="#">Select Department</a>
+                        
+                              <ul class="second-level-menu">
+                                <li>
+                                  <a href="#">Dept.OF CSE & IT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH CSE</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. CSE</a></li>
+                                    <li><a href="#">MCA</a></li>
+                                    <li><a href="#">BCA</a></li>
+                                  </ul>
+                                </li>
+                              
+                                <li>
+                                  <a href="#">Dept.OF MINING</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH MINING</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. MINING</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF PHARMACY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">B.PHARMA</a></li>
+                                    <li><a href="#">D.PHARMA</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF LAW</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BA-LLB</a></li>
+                                    <li><a href="../html_file/timetable.html">LLB</a></li>
+                                    <li><a href="#">LLM</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF AGRICULTURE</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.Sc</a></li>
+                                    <li><a href="#">B.Sc</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF MANAGEMENT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.COM</a></li>
+                                    <li><a href="#">MBA</a></li>
+                                    <li><a href="#">BBA</a></li>
+                                    <li><a href="#">B.COM</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BMLT</a></li>
+                                    <li><a href="#">BPT</a></li>
+                        
+                                  </ul>
+                                </li>
+                        
+                              </ul>
+                            </li>
+                        
+                          </ul>
+                            
+                    </div>
+                    <div class="cs">
+                        <span class="material-icons-sharp">computer</span>
+                        <h2>Examination result Report</h2><br>
+
+                        <ul class="top-level-menu">
+                            <li><a href="#">Select Department</a>
+                        
+                              <ul class="second-level-menu">
+                                <li>
+                                  <a href="#">Dept.OF CSE & IT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH CSE</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. CSE</a></li>
+                                    <li><a href="#">MCA</a></li>
+                                    <li><a href="#">BCA</a></li>
+                                  </ul>
+                                </li>
+                              
+                                <li>
+                                  <a href="#">Dept.OF MINING</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH MINING</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. MINING</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF PHARMACY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">B.PHARMA</a></li>
+                                    <li><a href="#">D.PHARMA</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF LAW</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BA-LLB</a></li>
+                                    <li><a href="../html_file/timetable.html">LLB</a></li>
+                                    <li><a href="#">LLM</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF AGRICULTURE</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.Sc</a></li>
+                                    <li><a href="#">B.Sc</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF MANAGEMENT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.COM</a></li>
+                                    <li><a href="#">MBA</a></li>
+                                    <li><a href="#">BBA</a></li>
+                                    <li><a href="#">B.COM</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BMLT</a></li>
+                                    <li><a href="#">BPT</a></li>
+                        
+                                  </ul>
+                                </li>
+                        
+                              </ul>
+                            </li>
+                        
+                          </ul>
+                    </div>
+                    <div class="cg">
+                        <span class="material-icons-sharp">dns</span>
+                        <h2>Exam Schedule</h2><br><br>
+                        <ul class="top-level-menu">
+                            <li><a href="#">Select Department</a>
+                        
+                              <ul class="second-level-menu">
+                                <li>
+                                  <a href="#">Dept.OF CSE & IT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH CSE</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. CSE</a></li>
+                                    <li><a href="#">MCA</a></li>
+                                    <li><a href="#">BCA</a></li>
+                                  </ul>
+                                </li>
+                              
+                                <li>
+                                  <a href="#">Dept.OF MINING</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH MINING</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. MINING</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF PHARMACY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">B.PHARMA</a></li>
+                                    <li><a href="#">D.PHARMA</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF LAW</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BA-LLB</a></li>
+                                    <li><a href="../html_file/timetable.html">LLB</a></li>
+                                    <li><a href="#">LLM</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF AGRICULTURE</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.Sc</a></li>
+                                    <li><a href="#">B.Sc</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF MANAGEMENT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.COM</a></li>
+                                    <li><a href="#">MBA</a></li>
+                                    <li><a href="#">BBA</a></li>
+                                    <li><a href="#">B.COM</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BMLT</a></li>
+                                    <li><a href="#">BPT</a></li>
+                        
+                                  </ul>
+                                </li>
+                        
+                              </ul>
+                            </li>
+                        
+                          </ul>
+                        <small class="text-muted">Last Update 24 Hours</small>
+                    </div>
+                    <div class="cg">
+                        <span class="material-icons-sharp">dns</span>
+                        <h2>Consolidate Report</h2>
+
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>96%</p>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 24 Hours</small>
+                    </div>
+                    <div class="cg">
+                        <span class="material-icons-sharp">dns</span>
+                        <h2>Communication</h2>
+
+
+                        <small class="text-muted">Last 24 Hours</small>
+                    </div>
+                    <div class="net">
+                        <span class="material-icons-sharp">router</span>
+                        <h2>Exam Started</h2>
+
+                        <ul class="top-level-menu">
+                            <li><a href="#">Select Department</a>
+                        
+                              <ul class="second-level-menu">
+                                <li>
+                                  <a href="#">Dept.OF CSE & IT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH CSE</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. CSE</a></li>
+                                    <li><a href="#">MCA</a></li>
+                                    <li><a href="#">BCA</a></li>
+                                  </ul>
+                                </li>
+                              
+                                <li>
+                                  <a href="#">Dept.OF MINING</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BTECH MINING</a></li>
+                                    <li><a href="#">DIPLOMA ENGG. MINING</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF PHARMACY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">B.PHARMA</a></li>
+                                    <li><a href="#">D.PHARMA</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF LAW</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BA-LLB</a></li>
+                                    <li><a href="../html_file/timetable.html">LLB</a></li>
+                                    <li><a href="#">LLM</a></li>
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept.OF AGRICULTURE</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.Sc</a></li>
+                                    <li><a href="#">B.Sc</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF MANAGEMENT</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">M.COM</a></li>
+                                    <li><a href="#">MBA</a></li>
+                                    <li><a href="#">BBA</a></li>
+                                    <li><a href="#">B.COM</a></li>
+                        
+                                  </ul>
+                                </li>
+                                <li>
+                                  <a href="#">Dept. OF PHYSIOTHERAPY</a>
+                                  <ul class="third-level-menu">
+                                    <li><a href="#">BMLT</a></li>
+                                    <li><a href="#">BPT</a></li>
+                        
+                                  </ul>
+                                </li>
+                        
+                              </ul>
+                            </li>
+                        
+                          </ul>
+                    </div>
+                   
+
+                    <div class="net">
+                        <span class="material-icons-sharp">router</span>
+                        <h2>Report</h2>
+
+                        <div class="progress">
+                            <svg>
+                                <circle cx="38" cy="38" r="36"></circle>
+                            </svg>
+                            <div class="number">
+                                <p>92%</p>
+                            </div>
+                        </div>
+                        <small class="text-muted">Last 24 Hours</small>
+                    </div>
+                </div>
+                <br><br>
+            </main>
+
+
+            
+        </div>
+    </div>
+        <div class="footer">
+
+
+            <div class="last1">
+                <h3>MARSHAI -UMS</h3>
+                <h4>copyright <i class="ri-copyright-line"></i>All Right Reserved 2024<i class="ri-registered-line"></i>
+                </h4>
+
+            </div>
+            <div class="list">
+                <ul class="last2">
+                    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <!-- Add more social media icons as needed -->
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="timeTable.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript">
+        function toggle() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById('popup');
+            popup.classList.toggle('active');
+        }
+
+    </script>
+</body>
+
+</html>
