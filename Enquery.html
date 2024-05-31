@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <title>Enquiry Form - MARSHAI</title>
+    <link rel="stylesheet" href="style/enquiry.css">
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-light " style="background-color: #101919ba;">
+            <a class="navbar-brand" href="index2.html" style="color: rgb(199, 166, 118);">
+              <img style="opacity: 0.5; " src="image/logo1.jpg" width="30" height="30" class="d-inline-block align-top" alt="">
+              MARSHAI
+            </a>
+            <div id="company" style="display: flex;align-items: center;
+            justify-content: end; gap: 30px; color: black;">
+               
+                <a href="About.html">ABOUT</a>
+                <a href="news.html">NEWS</a>
+                <a href="Enquery.html">ENQUERY</a>
+                <a href="blog.html">BLOG</a>
+               
+               
+            </div>
+          </nav>
+    </header>
+    <div class="container">
+        <h1>Enquiry Form</h1>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+        <label for="email">Email:</label>
+        <input type="text" id="email" placeholder="Enter your email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" placeholder="Enter your message"></textarea>
+        <button onclick="submitForm()">Submit</button>
+    </div>
+
+    <!-- Optional: Add JavaScript for form submission -->
+    <script>
+        function submitForm() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            // You can add logic here to handle form submission (e.g., send data to a server)
+            console.log("Form submitted:");
+            console.log("Name:", name);
+            console.log("Email:", email);
+            console.log("Message:", message);
+        }
+    </script>
+</body>
+</html>
