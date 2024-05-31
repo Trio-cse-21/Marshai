@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="blur">
+        <header>
+            <div class="logo" title="University Management System">
+                <img src="./images/logo.png" alt="">
+                <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+            </div>
+            <div class="navbar">
+                <a href="index.html" class="active">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="timetable.html" onclick="timeTableAll()">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Time Table</h3>
+                </a>
+                <a href="exam.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Examination</h3>
+                </a>
+                <a href="password.html">
+                    <span class="ri-honour-line " style="font-size: 20px;font-weight: 500;"></span>
+
+                    <h3>Semester</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp" onclick="">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <div id="profile-btn">
+                <span class="material-icons-sharp">person</span>
+            </div>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+
+        </header>
+
+        <div class="container">
+            <aside>
+
+                <div class="profile">
+
+                </div>
+            </aside>
+
+            <div class="margin1" style="margin-top: 50px;margin-left: 10%;">
+                <main style="justify-content: center;margin: auto;">
+                    <h1>Student Dashboard <i class="ri-dashboard-horizontal-line"></i></h1>
+                    <div class="subjects">
+                        
+                        <div class="eg">
+                            <span class="material-icons-sharp">architecture</span>
+                            <h2>Academic Plan</h2>
+                            <select name="forma" onchange="location = this.value;">
+                                <option value="index.html">Academic Calendar</option>
+                            </select>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="mth">
+                            <span class="material-icons-sharp">functions</span>
+                            <h2>Student Attendace</h2>
+
+                            <div class="progress">
+                                <svg>
+                                    <circle cx="38" cy="38" r="36"></circle>
+                                </svg>
+                                <div class="number">
+                                    <p>93%</p>
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="cs">
+                            <span class="material-icons-sharp">computer</span>
+                            <h2>Syllabus</h2>
+                            <br>
+                            <select name="forma" onchange="location = this.value;">
+                              <option value="/St_Internal_pages/Academic_Plan/academic_calendar.html">Semester 1</option>
+                              <option value="index.html">Semester 2</option>
+                              <option value="/St_Internal_pages/Academic_Plan/academic_calendar.html">Semester 3</option>
+                              <option value="index.html">Semester 4</option>
+                              <option value="index.html">Semester 5</option>
+                              <option value="index.html">Semester 6</option>
+                              <option value="index.html">Semester 7</option>
+                              <option value="index.html">Semester 8</option>
+                            </select>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                          </div>
+                          
+
+                        <div class="cs">
+                            <span class="material-icons-sharp">computer</span>
+                            <h2>Course Library</h2>
+
+                            <br>
+                            <select name="forma" onchange="location = this.value;">
+                                <option value="index.html">Semester 1</option>
+                                <option value="index.html">Semester 2</option>
+                                <option value="index.html">Semester 3</option>
+                                <option value="index.html">Semester 4</option>
+                                <option value="index.html">Semester 5</option>
+                                <option value="index.html">Semester 6</option>
+                                <option value="index.html">Semester 7</option>
+                                <option value="index.html">Semester 8</option>
+                            </select>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>Internal Test</h2>
+
+                            <br>
+                            <select name="forma" onchange="location = this.value;">
+                                <option value="index.html">Assignments</option>
+                                <option value="index.html">Assessments</option>
+                            </select>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last Update 24 Hours</small>
+                        </div>
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>Project Schedule</h2>
+
+                            <br>
+                            <select name="forma" onchange="location = this.value;">
+                                <option value="index.html">Semester 6</option>
+                                <option value="index.html">Semester 7</option>
+                                <option value="index.html">Semester 8</option>
+                            </select>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last Update 24 Hours</small>
+                        </div>
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>Communication</h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>Events</h2>
+
+                            <br>
+                            <select name="forma" onchange="location = this.value;">
+                                <option value="index.html">Clubs</option>
+                                <option value="index.html">Departments</option>
+                                <option value="index.html">Cells</option>
+                            </select>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>Results</h2>
+                            <br>
+                            <select name="forma" onchange="location = this.value;">
+                                <option value="index.html">Assignments</option>
+                                <option value="index.html">Assessments</option>
+                                <option value="index.html">Semester</option>
+                            </select>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>Progress Report</h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>Feedbacks</h2>
+
+                            <br>
+                            <select name="forma" onchange="location = this.value;">
+                                <option value="index.html">My Feedbacks</option>
+                                <option value="index.html">Teacher's Feedbacks</option>
+                                <option value="index.html">HOD's Feedbacks</option>
+                            </select>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>Billing</h2>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>E-Portfolio</h2>
+
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="cg">
+                            <span class="material-icons-sharp">dns</span>
+                            <h2>Grievances</h2>
+
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="net">
+                            <span class="material-icons-sharp">router</span>
+                            <h2>Apply Leave</h2>
+
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+
+                        <div class="net">
+                            <span class="material-icons-sharp">router</span>
+                            <h2>Policies & Regulations</h2>
+                            <br>
+                            <select name="forma" onchange="location = this.value;">
+                                <option value="index.html">Policies</option>
+                                <option value="index.html">Regulations</option>
+                            </select>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <br>
+                            <small class="text-muted">Last 24 Hours</small>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                </main>
+
+
+
+            </div>
+        </div>
+        <div class="footer">
+
+
+            <div class="last1">
+                <h3>MARSHAI - UMS</h3>
+                <h4>copyright <i class="ri-copyright-line"></i>All Right Reserved 2024<i class="ri-registered-line"></i>
+                </h4>
+
+            </div>
+            <div class="list">
+                <ul class="last2">
+                    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <!-- Add more social media icons as needed -->
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="timeTable.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript">
+        function toggle() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById('popup');
+            popup.classList.toggle('active');
+        }
+
+        document.getElementById('mySelect').addEventListener('change', function () {
+            var selectedOption = this.options[this.selectedIndex];
+            window.location.href = selectedOption.getAttribute('data-url');
+        });
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="./images/logo.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .footer {
+            height: 60px;
+            width: 100%;
+            background-color: rgb(162, 162, 248);
+        }
+
+        .last {
+            font-size: 15px;
+        }
+
+        .pop {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        #blur.active {
+            filter: blur(5px);
+            pointer-events: none;
+            user-select: none;
+        }
+
+        #popup {
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            padding: 50px;
+            box-shadow: 0 5px 30px rgb(150, 150, 242);
+            background-color: white;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s;
+        }
+
+        #popup.active {
+            top: 50%;
+            visibility: hidden;
+            opacity: 1;
+            transition: 0.5s;
+        }
+
+        .menusimple {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .last1{
+            text-align: center;
+            justify-content: center;
+        }
+        .footer {
+            display: flex;
+            padding: 10px;
+        }
+
+        .last1 {
+            width: 50%;
+            text-align: center;
+            justify-content: center;
+            padding-right: 10px;
+        }
+
+        .last2 {
+            width: 50%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding-left: 5px;
+            margin: 15% 60%;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="blur">
+        <header>
+            <div class="logo" title="University Management System">
+                <img src="./images/logo.png" alt="">
+                <h2><span class="danger">M</span>ARSH<span class="danger">AI</span></h2>
+            </div>
+            <div class="navbar">
+                <a href="index.html" class="active2">
+                    <span class="material-icons-sharp">home</span>
+                    <h3>Home</h3>
+                </a>
+                <a href="timetable.html" onclick="timeTableAll()">
+                    <span class="material-icons-sharp">today</span>
+                    <h3>Time Table</h3>
+                </a>
+                <a href="exam.html">
+                    <span class="material-icons-sharp">grid_view</span>
+                    <h3>Examination</h3>
+                </a>
+                <a href="student_dashboard.html">
+                    <span class="ri-honour-line " style="font-size: 20px;font-weight: 500;"></span>
+
+                    <h3>Dashboard</h3>
+                </a>
+                <a href="#">
+                    <span class="material-icons-sharp" onclick="">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+            <div id="profile-btn">
+                <span class="material-icons-sharp">person</span>
+            </div>
+            <div class="theme-toggler">
+                <span class="material-icons-sharp active">light_mode</span>
+                <span class="material-icons-sharp">dark_mode</span>
+            </div>
+
+        </header>
+        <div class="container">
+            <aside>
+                <div class="profile">
+                    <div class="top">
+                        <div class="profile-photo">
+                            <img src="./images/Krishna.jpg" alt="Profile_photo">
+                        </div>
+                        <div class="info">
+                            <p>Hey, <h3>Krishna</h3> </p>
+                            
+                        </div>
+                    </div>
+                    <div class="about">
+                        <h3>Program</h3>
+                        <p>BTech</p>
+                        <h3>Branch</h3>
+                        <p>Computer Science and Engineering</p>
+                        <h3>Enroll. No.</h3>
+                        <p>BT/CSE/21/008</p>
+                        <h3>Reg. No.</h3>
+                        <p>5998</p>
+                        <h3>Department</h3>
+                        <p>CS & IT</p>
+                        <h3>Semester</h3>
+                        <p>Sixth</p>
+                        <h3>Section</h3>
+                        <p>A</p>
+                        <h3>College</h3>
+                        <p>Radhe-Krishna University</p>
+                    </div>
+                </div>
+            </aside>
+
+            <main>
+
+                <div class="card" style="width: rem;">
+                    <div class="card-body">
+                        <h1 class="card-title">My Institution</h1>
+                        <br>
+                        <h2>Our vision</h2>
+                        <p>
+                            " The vision envisages augmenting the cause of education at all levels. As a catalyst for developing engaged and employable workforce, JRU envisions making a compelling transformation to the world through education, research and innovation that will make difference to the society and mankind. "
+                        </p>
+                        <br>
+                        <h2>Our mission</h2>
+                        <p>
+                            " We endeavor to create the best possible learning environment for our students through dynamic research, rigorous training and efficient mentorship and are committed to the cause of making higher education accessible to all irrespective of caste, color or creed. To create an atmosphere of rigor and discipline through innovative education that helps students to understand all aspects of societal challenges and enable them to works in team to tackle multifarious problems that directly benefit society. "
+                        </p>
+                        <br>
+                        <a href="https://www.jru.edu.in/" class="card-link" style="color: rgb(90, 54, 8);">RKU-Official-Website</a>
+                    </div>
+                </div>
+
+                <br>
+                
+
+                <div class="timetable" id="timetable">
+                    <div>
+                        <span id="prevDay">&lt;</span>
+                        <h2>Today's Timetable</h2>
+                        <span id="nextDay">&gt;</span>
+                    </div>
+                    <span class="closeBtn" onclick="timeTableAll()">X</span>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Room No.</th>
+                                <th>Subject</th>
+                                <th>Type</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                
+                <br><br>
+            </main>
+
+
+            <div class="right">
+                <div class="announcements">
+                    <h2>Announcements</h2>
+                    <div class="updates">
+                        <div class="message">
+                            <p> <b>Academic</b> Summer training internship with Live Projects.</p>
+                            <small class="text-muted">2 Minutes Ago</small>
+                        </div>
+                        <div class="message">
+                            <p> <b>Co-curricular</b> Global internship oportunity by Student organization.</p>
+                            <small class="text-muted">10 Minutes Ago</small>
+                        </div>
+                        <div class="message">
+                            <p> <b>Examination</b> Instructions for Mid Term Examination.</p>
+                            <small class="text-muted">Yesterday</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="leaves">
+                    <h2>Teachers on leave</h2>
+                    <div class="teacher">
+                        <div class="profile-photo"><img src="./images/profile-2.jpeg" alt=""></div>
+                        <div class="info">
+                            <h3>The Professor</h3>
+                            <small class="text-muted">Full Day</small>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="profile-photo"><img src="./images/profile-3.jpg" alt=""></div>
+                        <div class="info">
+                            <h3>Lisa Manobal</h3>
+                            <small class="text-muted">Half Day</small>
+                        </div>
+                    </div>
+                    <div class="teacher">
+                        <div class="profile-photo"><img src="./images/profile-4.jpg" alt=""></div>
+                        <div class="info">
+                            <h3>Himanshu Jindal</h3>
+                            <small class="text-muted">Full Day</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+
+
+            <div class="last1">
+                <h3>MARSHAI -UMS</h3>
+                <h4>copyright <i class="ri-copyright-line"></i>All Right Reserved 2024<i class="ri-registered-line"></i>
+                </h4>
+
+            </div>
+            <div class="list">
+                <ul class="last2">
+                    <li><a href="https://www.facebook.com/"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram"
+                                aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a>
+                    </li>
+                    <li><a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </li>
+                    <!-- Add more social media icons as needed -->
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <script src="timeTable.js"></script>
+    <script src="app.js"></script>
+    <script type="text/javascript">
+        function toggle() {
+            var blur = document.getElementById('blur');
+            blur.classList.toggle('active');
+            var popup = document.getElementById('popup');
+            popup.classList.toggle('active');
+        }
+
+    </script>
+</body>
+
+</html>
